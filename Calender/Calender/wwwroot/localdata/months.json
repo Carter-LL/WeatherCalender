@@ -1,0 +1,118 @@
+﻿{
+  "January": {
+    "month_name": "January",
+    "starting_day": 1,
+    "ending_day": 31,
+    "holidays": {
+      "1": "New Year's Day",
+      "15": "Martin Luther King Jr. Day"
+    },
+    "summary": "January is the first month of the year, often associated with new beginnings and resolutions. It's a time for reflection and setting goals for the year ahead."
+  },
+  "February": {
+    "month_name": "February",
+    "starting_day": 1,
+    "ending_day": 28,
+    "holidays": {
+      "14": "Valentine's Day",
+      "19": "Presidents' Day"
+    },
+    "summary": "February is the shortest month of the year, celebrated for Valentine's Day and for honoring U.S. presidents. It’s also a time to celebrate love and friendship."
+  },
+  "March": {
+    "month_name": "March",
+    "starting_day": 1,
+    "ending_day": 31,
+    "holidays": {
+      "17": "St. Patrick's Day",
+      "10": "Daylight Saving Time Begins"
+    },
+    "summary": "March is a month of transition, marking the arrival of spring in the Northern Hemisphere. It’s known for St. Patrick's Day celebrations and the start of Daylight Saving Time."
+  },
+  "April": {
+    "month_name": "April",
+    "starting_day": 1,
+    "ending_day": 30,
+    "holidays": {
+      "1": "April Fools' Day",
+      "31": "Easter Sunday",
+      "22": "Earth Day"
+    },
+    "summary": "April is a time for spring showers and blooming flowers. It features fun events like April Fools' Day and Earth Day, encouraging environmental awareness."
+  },
+  "May": {
+    "month_name": "May",
+    "starting_day": 1,
+    "ending_day": 31,
+    "holidays": {
+      "1": "May Day",
+      "29": "Memorial Day"
+    },
+    "summary": "May celebrates the full arrival of spring and is a month of remembrance, especially for Memorial Day. It honors fallen soldiers and celebrates the warmth of the season."
+  },
+  "June": {
+    "month_name": "June",
+    "starting_day": 1,
+    "ending_day": 30,
+    "holidays": {
+      "19": "Juneteenth National Independence Day",
+      "18": "Father's Day"
+    },
+    "summary": "June marks the official start of summer and celebrates Father’s Day. Juneteenth is observed to commemorate the emancipation of enslaved people in the U.S."
+  },
+  "July": {
+    "month_name": "July",
+    "starting_day": 1,
+    "ending_day": 31,
+    "holidays": {
+      "4": "Independence Day"
+    },
+    "summary": "July is a month for patriotism, featuring the United States Independence Day celebrations with fireworks, parades, and festivities that celebrate American freedom."
+  },
+  "August": {
+    "month_name": "August",
+    "starting_day": 1,
+    "ending_day": 31,
+    "holidays": {},
+    "summary": "August is typically the last month of summer in the Northern Hemisphere, filled with vacations and warm weather activities before the start of the school year."
+  },
+  "September": {
+    "month_name": "September",
+    "starting_day": 1,
+    "ending_day": 30,
+    "holidays": {
+      "4": "Labor Day",
+      "11": "Patriot Day"
+    },
+    "summary": "September signals the start of fall and is a time for back-to-school. Labor Day celebrates workers, and Patriot Day honors those lost in the 9/11 attacks."
+  },
+  "October": {
+    "month_name": "October",
+    "starting_day": 1,
+    "ending_day": 31,
+    "holidays": {
+      "31": "Halloween"
+    },
+    "summary": "October is filled with autumn colors and Halloween celebrations. It’s a month of spooky fun, pumpkin carving, and enjoying the cooler weather."
+  },
+  "November": {
+    "month_name": "November",
+    "starting_day": 1,
+    "ending_day": 30,
+    "holidays": {
+      "23": "Thanksgiving Day",
+      "11": "Veterans Day"
+    },
+    "summary": "November is a month for giving thanks. Thanksgiving Day celebrates harvest and blessings, while Veterans Day honors those who have served in the military."
+  },
+  "December": {
+    "month_name": "December",
+    "starting_day": 1,
+    "ending_day": 31,
+    "holidays": {
+      "25": "Christmas Day",
+      "31": "New Year's Eve"
+    },
+    "summary": "December is a festive month celebrating holidays like Christmas and New Year's Eve. It’s a time of reflection, family gatherings, and preparation for the year ahead."
+  }
+}

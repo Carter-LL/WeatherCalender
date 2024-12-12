@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\rv3jd2si9e.gz",
-      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
-    },
-    {
       "Id": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Calender.styles.css",
       "PackagePath": "staticwebassets\\Calender.styles.css"
     },
@@ -41,8 +37,20 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\wwwroot\\localdata\\months.json",
+      "PackagePath": "staticwebassets\\localdata\\months.json"
+    },
+    {
       "Id": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Calender.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Calender.Microsoft.AspNetCore.StaticWebAssets.props",

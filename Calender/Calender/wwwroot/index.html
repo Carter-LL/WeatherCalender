@@ -27,7 +27,28 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="eventForm">
+                <p>Would you like to schedule an event on this date?</p>
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" required><br><br>
+                <label for="eventDate">Event Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required><br><br>
+                <label for="eventTime">Event Time:</label>
+                <input type="time" id="eventTime" name="eventTime" required><br><br>
+                <label for="eventDesc">Description:</label>
+                <textarea id="eventDesc" name="eventDesc" required></textarea><br><br>
+                <button type="submit">Submit</button>
+                <button type="button" onclick="closeModal()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
