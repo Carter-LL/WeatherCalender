@@ -24,6 +24,35 @@ The Weather-Aware Task Manager combines task management with weather data to hel
 - Task Filtering: Users can filter tasks by status and view tasks alongside the current weather forecast.
 - Responsive Design: A modern, user-friendly interface that works well on both desktop and mobile devices.
 
+# Requirements to Run the Blazor WebAssembly App
+## 1. **.NET SDK**
+   - **Target Framework**: `.NET 8.0` (ensure you have the .NET 8.0 SDK installed)
+   - You can download and install it from the [official .NET website](https://dotnet.microsoft.com/download/dotnet).
+
+## 2. **Blazor WebAssembly**
+   - **Microsoft.AspNetCore.Components.WebAssembly**: Version `8.0.11`
+   - This package is required to run Blazor WebAssembly applications.
+
+## 3. **Development Server**
+   - **Microsoft.AspNetCore.Components.WebAssembly.DevServer**: Version `8.0.11`
+   - This package is used during local development to run the WebAssembly app.
+
+## 4. **JSON Serialization**
+   - **Newtonsoft.Json**: Version `13.0.3`
+   - This package is required for handling JSON serialization and deserialization.
+     
+## 5. **WebAssembly and Browser Support**
+   - The application is built as a **Blazor WebAssembly** app, so it will require a modern web browser to run (e.g., Chrome, Firefox, Edge, Safari).
+
+## 6. **Development Tools**
+   - A modern IDE or text editor like **Visual Studio**, **Visual Studio Code**, or another editor with .NET support is recommended.
+   - The **Blazor WebAssembly DevServer** will be needed for local development and testing.
+
+### Additional Notes
+- Ensure that your system has the necessary resources (e.g., memory, CPU) to run a Blazor WebAssembly app effectively.
+- The app depends on web APIs like geolocation, so ensure the user's browser has the necessary permissions to access location services.
+
+
 # Current WebAPIs being used
 - (Weather Data) https://forecast9.p.rapidapi.com/rapidapi/forecast/46.95828/10.87152/summary/
 - (Weather Data) https://rapidapi.com/wettercom-wettercom-default/api/forecast9/
