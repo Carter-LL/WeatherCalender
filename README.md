@@ -38,6 +38,9 @@ The Weather-Aware Task Manager combines task management with weather data to hel
   - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/wwwroot/js/main.js#L44
   - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Pages/Home.razor#L223
   - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/wwwroot/js/main.js#L47
+ 
+- Add comments to your code explaining how you are using at least 2 of the solid principles
+  - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Pages/Home.razor#L151
 
 ![image](https://github.com/user-attachments/assets/6ae3a8ca-04c7-4d15-af12-b8d0d467ea13)
 ![image](https://github.com/user-attachments/assets/ab4a12c5-6d40-4bbe-8372-764cc4e64a75)
