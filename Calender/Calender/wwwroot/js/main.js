@@ -26,3 +26,13 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function saveData(key, value) {
+    localStorage.setItem(key, value);
+}
+function loadData(key) {
+    return localStorage.getItem(key);
+}
+function removeData(key) {
+    localStorage.removeItem(key);
+}

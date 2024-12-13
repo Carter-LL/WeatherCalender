@@ -3,14 +3,16 @@
 @using Calender.Models
 @using System.Text.RegularExpressions;
 @using System.Text
+@using Calender.Services;
 @inject HttpClient Http
+@inject IJSRuntime JSRuntime
 
 <PageTitle>Monthly Holidays</PageTitle>
 
 <h1>Holidays and Observances</h1>
 <p>Select a month to plan!</p>
 
-@if (monthsData != null)
+@if (monthsData != null && forecastData != null)
 {
     @if (monthsData.ContainsKey(selectedMonth))
     {
@@ -27,7 +29,28 @@
                     extra = " - " + @monthsData[selectedMonth].holidays[day];
                 }
                 <li onclick="showModal()">
-                    <time datetime="@day">@day</time>@extra
+                    @{
+                        bool complete = false;
+                    }
+                    @foreach(ForecastItem forecastItem in forecastData.Items){
+                        if(forecastItem.Date.ToString().Contains("2024-" + currentmonthNumber + "-" + day) && !complete){
+                            decimal avgtemp = Average(Convert.ToInt32(forecastItem.Temperature.Min), Convert.ToInt32(forecastItem.Temperature.Max));
+
+                            double celsius = Convert.ToDouble(avgtemp);
+
+                            double fahrenheit = (celsius * 9 / 5) + 32;
+
+                            string tempText = fahrenheit.ToString() + "°";
+
+                            <time datetime="@day">@day</time>@extra<br>@tempText
+                            complete = true;
+                            break;
+                        }
+                    }
+                    @if(!complete){
+                        <time datetime="@day">@day</time>@extra
+                    }
+                    
                 </li>
             }
         </ul>
@@ -35,27 +58,49 @@
 }
 
 @code {
+
     Dictionary<string, Month> monthsData;
+    WeatherForecast forecastData;
+    int currentmonthNumber = Convert.ToInt32(DateTime.Now.ToString("MM"));
     private string selectedMonth = getFullName(Convert.ToInt32(DateTime.Now.ToString("MM")));
 
     private Month[]? months;
 
     protected override async Task OnInitializedAsync()
     {
+        forecastData = await WeatherService.GetWeatherData();
+
         Console.WriteLine(DateTime.Now.ToString("MM"));
         string name = getFullName(Convert.ToInt32(DateTime.Now.ToString("MM")));
         string jsonString = await Http.GetStringAsync("localdata/months.json");
         monthsData = JsonSerializer.Deserialize<Dictionary<string, Month>>(jsonString);
-
-        GeoLocation geo = await GetGeoLocation(Http);
-        Console.WriteLine(geo.Lat + " - " + geo.Lon);
     }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            //Save and check if geolocation already set to avoid being rate limited by api
+            if(await GetDataAsync("lat") == null){
+                GeoLocation geo = await GetGeoLocation(Http);
+                Console.WriteLine(geo.Lat + " - " + geo.Lon);
+                await SaveDataAsync("lat", geo.Lat.ToString());
+                await SaveDataAsync("lon", geo.Lon.ToString());
+            }
+        }
+    }
+
 
     // function to get the full month name
     static string getFullName(int month)
     {
         DateTime date = new DateTime(2020, month, 1);
         return date.ToString("MMMM");
+    }
+
+    public static decimal Average(int num1, int num2)
+    {
+        return (decimal)(num1 + num2) / 2;
     }
 
     // Helper function to generate the content for the file
@@ -104,5 +149,41 @@
         }
 
         return geo;
+    }
+
+    // Save data to localStorage
+    public async Task SaveDataAsync(string key, string value)
+    {
+        if (string.IsNullOrEmpty(key) || string.IsNullOrEmpty(value))
+        {
+            throw new ArgumentException("Key and value must be provided.");
+        }
+
+        // Call JavaScript to store data in localStorage
+        await JSRuntime.InvokeVoidAsync("saveData", key, value);
+    }
+
+    // Load data from localStorage
+    public async Task<string> GetDataAsync(string key)
+    {
+        if (string.IsNullOrEmpty(key))
+        {
+            throw new ArgumentException("Key must be provided.");
+        }
+
+        // Call JavaScript to retrieve data from localStorage
+        return await JSRuntime.InvokeAsync<string>("loadData", key);
+    }
+
+    // Remove data from localStorage
+    public async Task RemoveDataAsync(string key)
+    {
+        if (string.IsNullOrEmpty(key))
+        {
+            throw new ArgumentException("Key must be provided.");
+        }
+
+        // Call JavaScript to remove data from localStorage
+        await JSRuntime.InvokeVoidAsync("removeData", key);
     }
 }
