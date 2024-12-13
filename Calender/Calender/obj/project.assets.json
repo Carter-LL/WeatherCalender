@@ -462,6 +462,49 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "XPlat.Core/1.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/XPlat.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/XPlat.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "XPlat.Device.Geolocation/1.8.1": {
+        "type": "package",
+        "dependencies": {
+          "XPlat.Core": "1.8.1",
+          "XPlat.Foundation": "1.8.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/XPlat.Device.Geolocation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/XPlat.Device.Geolocation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "XPlat.Foundation/1.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/XPlat.Foundation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/XPlat.Foundation.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net8.0/browser-wasm": {
@@ -924,6 +967,49 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "XPlat.Core/1.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/XPlat.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/XPlat.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "XPlat.Device.Geolocation/1.8.1": {
+        "type": "package",
+        "dependencies": {
+          "XPlat.Core": "1.8.1",
+          "XPlat.Foundation": "1.8.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/XPlat.Device.Geolocation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/XPlat.Device.Geolocation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "XPlat.Foundation/1.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/XPlat.Foundation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/XPlat.Foundation.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -1890,6 +1976,65 @@
         "system.io.pipelines.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "XPlat.Core/1.8.1": {
+      "sha512": "iM5AO7niEyKRAVqPTh9CJxhu4IUbJw4P6WGc1O6bWwuXn2K8yyn+ms10IXIhCgKj4k5ZbHp171KeTbpOAmiM3A==",
+      "type": "package",
+      "path": "xplat.core/1.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ProjectIcon.png",
+        "lib/monoandroid10.0/XPlat.Core.dll",
+        "lib/monoandroid10.0/XPlat.Core.xml",
+        "lib/netstandard2.0/XPlat.Core.dll",
+        "lib/netstandard2.0/XPlat.Core.xml",
+        "lib/uap10.0.17763/XPlat.Core.dll",
+        "lib/uap10.0.17763/XPlat.Core.pri",
+        "lib/uap10.0.17763/XPlat.Core.xml",
+        "lib/xamarinios10/XPlat.Core.dll",
+        "lib/xamarinios10/XPlat.Core.xml",
+        "xplat.core.1.8.1.nupkg.sha512",
+        "xplat.core.nuspec"
+      ]
+    },
+    "XPlat.Device.Geolocation/1.8.1": {
+      "sha512": "UPFZFK7fVkh7i7/Ps8f8BiZAH5y08caHjNk9GCm5KmUjmwlNf2FyL5MN8UseHU4t61sQLFbHTRLho1DFSeO28Q==",
+      "type": "package",
+      "path": "xplat.device.geolocation/1.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ProjectIcon.png",
+        "lib/monoandroid10.0/XPlat.Device.Geolocation.dll",
+        "lib/monoandroid10.0/XPlat.Device.Geolocation.xml",
+        "lib/netstandard2.0/XPlat.Device.Geolocation.dll",
+        "lib/netstandard2.0/XPlat.Device.Geolocation.xml",
+        "lib/uap10.0.17763/XPlat.Device.Geolocation.dll",
+        "lib/uap10.0.17763/XPlat.Device.Geolocation.pri",
+        "lib/uap10.0.17763/XPlat.Device.Geolocation.xml",
+        "lib/xamarinios10/XPlat.Device.Geolocation.dll",
+        "lib/xamarinios10/XPlat.Device.Geolocation.xml",
+        "xplat.device.geolocation.1.8.1.nupkg.sha512",
+        "xplat.device.geolocation.nuspec"
+      ]
+    },
+    "XPlat.Foundation/1.8.1": {
+      "sha512": "ZWPDiocNhTaZSeMBHZiOQH8zRDGPzP9wmZsTpezADIOb/SzC22EyEdWU0Zp+9QDLtsS4FOOulFOp5Hd+bgpVeQ==",
+      "type": "package",
+      "path": "xplat.foundation/1.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ProjectIcon.png",
+        "lib/netstandard2.0/XPlat.Foundation.dll",
+        "lib/netstandard2.0/XPlat.Foundation.xml",
+        "xplat.foundation.1.8.1.nupkg.sha512",
+        "xplat.foundation.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1898,7 +2043,8 @@
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.11",
       "Microsoft.NET.ILLink.Tasks >= 8.0.11",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 9.0.0",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "XPlat.Device.Geolocation >= 1.8.1"
     ]
   },
   "packageFolders": {
@@ -1976,6 +2122,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "XPlat.Device.Geolocation": {
+            "target": "Package",
+            "version": "[1.8.1, )"
           }
         },
         "imports": [

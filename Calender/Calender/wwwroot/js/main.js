@@ -4,6 +4,8 @@ function showModal() {
     modal.style.display = "block";
 }
 
+function closeModal() { var modal = document.getElementById("myModal"); modal.style.display = "none"; }
+
 // Function to close the modal
 document.getElementsByClassName("close")[0].onclick = function() {
     var modal = document.getElementById("myModal");

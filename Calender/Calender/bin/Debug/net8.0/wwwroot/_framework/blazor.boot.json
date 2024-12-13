@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Calender",
   "resources": {
-    "hash": "sha256-HmKP8yc0OFqmswBgCNdhhaKinjsDcgQfd8lzpD5tgNQ=",
+    "hash": "sha256-wk6aaxDaOgqFAhacfDBsJ5HjhR5UV2y1wt60RQ7oEnM=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -42,6 +42,9 @@
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-+wpzFJcg/CuYhygrH1ovEDlvYbxiG8U68YLvihiZM34=",
       "Newtonsoft.Json.wasm": "sha256-GlXMWKvDs45M2pACoR3Y4Qh8mcrOZGljqmvJY+6JZ5s=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
+      "XPlat.Core.wasm": "sha256-ZyFIr2prAf9t5gHYqwvuUEuDqzmj6fb1SPMHCAZuRMQ=",
+      "XPlat.Device.Geolocation.wasm": "sha256-uc5l0f72ZQajTyvfXYh4gzdzADMz/EGK0Al5+ljcIts=",
+      "XPlat.Foundation.wasm": "sha256-Y4RnDPYw45K42Co10Gsi54DN5A0qd6Vln6cvD621hlw=",
       "Microsoft.CSharp.wasm": "sha256-Uadhh9ejd0eod083HcpwnJ3OpcrMgcP88Vyftm5/ZkA=",
       "Microsoft.VisualBasic.Core.wasm": "sha256-SBz1WgEN4UGzdrCKxLUaNAY5S7cs6RLZTuFDdPkMS6g=",
       "Microsoft.VisualBasic.wasm": "sha256-GWWO9YY5BhSXDF/4kKQ6mS6AUpTQDRYxh8SJehKh8YA=",
@@ -210,10 +213,10 @@
       "mscorlib.wasm": "sha256-04e4k5XU8HWGB/dq/2+j84xzzGPflTs0IYWI0OxogVc=",
       "netstandard.wasm": "sha256-gnGZURPnoSmjXuYNCOJi5tt8qn2LRImWgue1Ru3/TDQ=",
       "System.Private.CoreLib.wasm": "sha256-6w3jYr0arcp8jnt4aeqh+AmqrLA6q7jl9rQYAwLzE0M=",
-      "Calender.wasm": "sha256-Oaaak5Gq9IVVDBwHXycfjheATpHDd/teIzLSgNhIxxI="
+      "Calender.wasm": "sha256-flmHZYWqsigr2EhZmuELp3R/CfN9CyiPvg+DUZtCWiA="
     },
     "pdb": {
-      "Calender.pdb": "sha256-xFFymVYFeSEiKNlqOM6swDB6fDideiWRZoTa8CBpr7s="
+      "Calender.pdb": "sha256-L3aeMapdlSUqxf+QKXSggO5fIfvccX1vMUVp/ZJd6Hc="
     }
   },
   "cacheBootResources": true,

@@ -75,6 +75,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "XPlat.Device.Geolocation": {
+              "target": "Package",
+              "version": "[1.8.1, )"
             }
           },
           "imports": [

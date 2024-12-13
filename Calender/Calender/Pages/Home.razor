@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using System.Text.Json
 @using Calender.Models
+@using System.Text.RegularExpressions;
 @inject HttpClient Http
 
 <PageTitle>Monthly Holidays</PageTitle>
@@ -47,9 +48,12 @@
 
         string name = getFullName(Convert.ToInt32(DateTime.Now.ToString("MM")));
 
-        string jsonString  = await Http.GetStringAsync("localdata/months.json");
+        string jsonString = await Http.GetStringAsync("localdata/months.json");
 
         monthsData = JsonSerializer.Deserialize<Dictionary<string, Month>>(jsonString);
+
+        GeoLocation geo = await GetGeoLocation(Http);
+        Console.WriteLine(geo.Lat + " - " + geo.Lon);
     }
 
     // function to get the full month name
@@ -58,6 +62,48 @@
         DateTime date = new DateTime(2020, month, 1);
 
         return date.ToString("MMMM");
+    }
+
+    private static async Task<GeoLocation> GetGeoLocation(HttpClient client){
+        GeoLocation geo = new();
+
+        string jsonString = await client.GetStringAsync("https://api.my-ip.io/v2/ip.json");
+
+        // Regex to capture lat and lon values
+        string pattern = @"""lat"":\s*(-?\d+\.\d+)\s*,\s*""lon"":\s*(-?\d+\.\d+)";
+
+        Regex regex = new Regex(pattern);
+        Match match = regex.Match(jsonString);
+
+        if (match.Success)
+        {
+            // Extract the lat and lon as strings
+            string latString = match.Groups[1].Value;
+            string lonString = match.Groups[2].Value;
+
+            // Convert lat and lon to float and then to int (rounding)
+            if (float.TryParse(latString, out float latFloat) && float.TryParse(lonString, out float lonFloat))
+            {
+                int latInt = (int)Math.Round(latFloat);  // Round to the nearest integer
+                int lonInt = (int)Math.Round(lonFloat);  // Round to the nearest integer
+
+                Console.WriteLine($"Latitude (rounded to int): {latInt}");
+                Console.WriteLine($"Longitude (rounded to int): {lonInt}");
+
+                geo.Lat = latInt;
+                geo.Lon = lonInt;
+            }
+            else
+            {
+                Console.WriteLine("Error: Could not convert lat/lon to float.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("No match found.");
+        }
+
+        return geo;
     }
 
 }
