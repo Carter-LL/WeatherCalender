@@ -70,7 +70,19 @@
 
     protected override async Task OnInitializedAsync()
     {
-        forecastData = await WeatherService.GetWeatherData();
+        //Save and check if geolocation already set to avoid being rate limited by api
+        if (await GetDataAsync("lat") == null)
+        {
+            GeoLocation geo = await GetGeoLocation(Http);
+            Console.WriteLine(geo.Lat + " - " + geo.Lon);
+            await SaveDataAsync("lat", geo.Lat.ToString());
+            await SaveDataAsync("lon", geo.Lon.ToString());
+        }
+
+        string lat = await GetDataAsync("lat") ?? "50";
+        string lon = await GetDataAsync("lon") ?? "50";
+
+        forecastData = await WeatherService.GetWeatherData(lat, lon);
 
         Console.WriteLine(DateTime.Now.ToString("MM"));
         string name = getFullName(Convert.ToInt32(DateTime.Now.ToString("MM")));
@@ -98,6 +110,26 @@
                 Console.WriteLine(geo.Lat + " - " + geo.Lon);
                 await SaveDataAsync("lat", geo.Lat.ToString());
                 await SaveDataAsync("lon", geo.Lon.ToString());
+            }
+
+            string lat = await GetDataAsync("lat") ?? "50";
+            string lon = await GetDataAsync("lon") ?? "50";
+
+            forecastData = await WeatherService.GetWeatherData(lat, lon);
+
+            Console.WriteLine(DateTime.Now.ToString("MM"));
+            string name = getFullName(Convert.ToInt32(DateTime.Now.ToString("MM")));
+            string jsonString = await Http.GetStringAsync("localdata/months.json");
+            monthsData = JsonSerializer.Deserialize<Dictionary<string, Month>>(jsonString);
+
+            for (int day = monthsData[selectedMonth].starting_day; day <= monthsData[selectedMonth].ending_day; day++)
+            {
+                string iid = currentmonthNumber + "-" + day;
+
+                if (await GetDataAsync("event-" + iid) != null)
+                {
+                    monthsData[selectedMonth].holidays.Add(day, await GetDataAsync("event-" + iid));
+                }
             }
         }
     }

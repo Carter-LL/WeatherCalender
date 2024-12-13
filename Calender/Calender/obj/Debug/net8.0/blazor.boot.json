@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Calender",
   "resources": {
-    "hash": "sha256-wemT8ME6gNSwzuBUEgbSIw9AAReJCdUvahGuFsrTiFU=",
+    "hash": "sha256-ZSK5Nkfz6GIuIxZ+vmA01UUORQJpqV+Y9vzbwWdjblI=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -216,10 +216,10 @@
       "mscorlib.wasm": "sha256-04e4k5XU8HWGB/dq/2+j84xzzGPflTs0IYWI0OxogVc=",
       "netstandard.wasm": "sha256-gnGZURPnoSmjXuYNCOJi5tt8qn2LRImWgue1Ru3/TDQ=",
       "System.Private.CoreLib.wasm": "sha256-6w3jYr0arcp8jnt4aeqh+AmqrLA6q7jl9rQYAwLzE0M=",
-      "Calender.wasm": "sha256-ZmGPvg/R2V2H3Q2ENtzThn+etN9Gh2/9G0DvVYKAMvc="
+      "Calender.wasm": "sha256-KwwAaF0M7iP9CnQ2ZuP5ZURWYnetDdZDrqPKmV6fLEs="
     },
     "pdb": {
-      "Calender.pdb": "sha256-ZiR0tAtNGF9F8m0cE+RVeoeY9nx0ivYNJ8OF7T7vFKE="
+      "Calender.pdb": "sha256-H5sfgFqfl/Iwr29pZ1C2loJ71x0zI4NX2I69CQpDNdM="
     }
   },
   "cacheBootResources": true,

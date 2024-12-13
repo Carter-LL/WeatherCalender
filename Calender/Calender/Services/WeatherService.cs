@@ -6,13 +6,13 @@
 
     public class WeatherService
     {
-        public static async Task<WeatherForecast> GetWeatherData()
+        public static async Task<WeatherForecast> GetWeatherData(string lat, string log)
         {
             var client = new HttpClient();
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri("https://forecast9.p.rapidapi.com/rapidapi/forecast/46.95828/10.87152/summary/"),
+                RequestUri = new Uri("https://forecast9.p.rapidapi.com/rapidapi/forecast/" + lat + "/" + log + "/summary/"),
                 Headers =
                 {
                     { "x-rapidapi-key", "b6ee049cc6mshfbfad3e99244a7fp1993fcjsnaaec1e28b8be" },
