@@ -24,11 +24,13 @@
             @for (int day = monthsData[selectedMonth].starting_day; day <= monthsData[selectedMonth].ending_day; day++)
             {
                 string extra = "";
+                string iid = currentmonthNumber + "-" + day;
                 @if (monthsData[selectedMonth].holidays.ContainsKey(day))
                 {
                     extra = " - " + @monthsData[selectedMonth].holidays[day];
                 }
-                <li onclick="showModal()">
+
+                <li onclick="showModal('@iid')">
                     @{
                         bool complete = false;
                     }
@@ -50,7 +52,7 @@
                     @if(!complete){
                         <time datetime="@day">@day</time>@extra
                     }
-                    
+
                 </li>
             }
         </ul>
@@ -74,6 +76,16 @@
         string name = getFullName(Convert.ToInt32(DateTime.Now.ToString("MM")));
         string jsonString = await Http.GetStringAsync("localdata/months.json");
         monthsData = JsonSerializer.Deserialize<Dictionary<string, Month>>(jsonString);
+
+        for (int day = monthsData[selectedMonth].starting_day; day <= monthsData[selectedMonth].ending_day; day++)
+        {
+            string iid = currentmonthNumber + "-" + day;
+
+            if (await GetDataAsync("event-" + iid) != null)
+            {
+                monthsData[selectedMonth].holidays.Add(day, await GetDataAsync("event-" + iid));
+            }
+        }
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)

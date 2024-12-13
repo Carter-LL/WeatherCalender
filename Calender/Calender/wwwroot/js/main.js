@@ -1,7 +1,9 @@
 ﻿// Function to show the modal
-function showModal() {
+var selectedid = ""
+function showModal(id) {
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
+    selectedid = id;
 }
 
 function closeModal() { var modal = document.getElementById("myModal"); modal.style.display = "none"; }
@@ -10,17 +12,26 @@ function closeModal() { var modal = document.getElementById("myModal"); modal.st
 document.getElementsByClassName("close")[0].onclick = function() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
+
+
 }
 
 // Function to handle scheduling an event
 function scheduleEvent() {
     alert("Event scheduled!");
+
+    var val = document.getElementById("eventName");
+    console.log(val.value);
+
+    saveData("event-" + selectedid, val.value)
+
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
+    window.location.reload();
 }
 
 // Close the modal if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     var modal = document.getElementById("myModal");
     if (event.target === modal) {
         modal.style.display = "none";
