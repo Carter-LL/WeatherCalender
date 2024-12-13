@@ -17,3 +17,7 @@ The Weather-Aware Task Manager combines task management with weather data to hel
 - Weather Integration: Fetch and display current weather conditions based on the user's location, helping them plan tasks accordingly.
 - Task Filtering: Users can filter tasks by status and view tasks alongside the current weather forecast.
 - Responsive Design: A modern, user-friendly interface that works well on both desktop and mobile devices.
+
+![image](https://github.com/user-attachments/assets/6ae3a8ca-04c7-4d15-af12-b8d0d467ea13)
+![image](https://github.com/user-attachments/assets/ab4a12c5-6d40-4bbe-8372-764cc4e64a75)
+
