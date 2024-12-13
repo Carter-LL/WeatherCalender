@@ -18,6 +18,11 @@ The Weather-Aware Task Manager combines task management with weather data to hel
 - Task Filtering: Users can filter tasks by status and view tasks alongside the current weather forecast.
 - Responsive Design: A modern, user-friendly interface that works well on both desktop and mobile devices.
 
+# Current WebAPIs being used
+- (Weather Data) https://forecast9.p.rapidapi.com/rapidapi/forecast/46.95828/10.87152/summary/
+- (Weather Data) https://rapidapi.com/wettercom-wettercom-default/api/forecast9/
+- (Geo Latitude & Longitude Data) https://api.my-ip.io/v2/ip.json
+
 ![image](https://github.com/user-attachments/assets/6ae3a8ca-04c7-4d15-af12-b8d0d467ea13)
 ![image](https://github.com/user-attachments/assets/ab4a12c5-6d40-4bbe-8372-764cc4e64a75)
 
