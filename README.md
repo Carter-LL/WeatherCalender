@@ -25,7 +25,7 @@ The Weather-Aware Task Manager combines task management with weather data to hel
 
 # Features Added
 - Implement a regular expression (regex) to validate or ensure a field is always stored and displayed in the correct format
-  - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Pages/Home.razor#L179C1
+  - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Pages/Home.razor#L179
 
 - Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program
   - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Pages/Home.razor#L90
