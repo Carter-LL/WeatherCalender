@@ -1,3 +1,9 @@
+## IMPORTANT NOTES
+Using Blazor Webassembly doesn't allow you to store local files to a machine due to the fact each instance is sandboxed. Due to this I instead store data into the javascript localstorage and json files.
+- https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Pages/Home.razor#L199
+- https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/wwwroot/js/main.js#L41
+- https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/wwwroot/localdata/months.json#L2
+
 # Weather-Aware-Task-Manager
 The Weather-Aware Task Manager combines task management with weather data to help users plan their activities more effectively. Users can create, view, and manage tasks while also checking the current weather conditions to decide when to schedule outdoor activities or adjust their plans.
 
