@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Calender",
   "resources": {
-    "hash": "sha256-wk6aaxDaOgqFAhacfDBsJ5HjhR5UV2y1wt60RQ7oEnM=",
+    "hash": "sha256-lAIC16/hta6a7wtrojn/E53N1FEfbeKL26njN4FMvo8=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -41,6 +41,9 @@
       "Microsoft.JSInterop.wasm": "sha256-5cqIyKsdUZ1dHGvNaW58/lWROJnvOdig8Ja6mv1p3Qg=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-+wpzFJcg/CuYhygrH1ovEDlvYbxiG8U68YLvihiZM34=",
       "Newtonsoft.Json.wasm": "sha256-GlXMWKvDs45M2pACoR3Y4Qh8mcrOZGljqmvJY+6JZ5s=",
+      "SQLitePCLRaw.batteries_v2.wasm": "sha256-r5pUQvWwdp1MxZ7qFfD4+L+mh0WmE7DrApFw8tLgXLA=",
+      "SQLitePCLRaw.core.wasm": "sha256-aT9iJxIXrYsk8FoIIsd6aHViCVRd9BN56E6BlayaAI4=",
+      "SQLitePCLRaw.provider.e_sqlite3.wasm": "sha256-IqWf9GZE+hQv57kMpvhKmc8Uuo5cD4NOnTGLYFaOhL0=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
       "XPlat.Core.wasm": "sha256-ZyFIr2prAf9t5gHYqwvuUEuDqzmj6fb1SPMHCAZuRMQ=",
       "XPlat.Device.Geolocation.wasm": "sha256-uc5l0f72ZQajTyvfXYh4gzdzADMz/EGK0Al5+ljcIts=",
@@ -213,10 +216,10 @@
       "mscorlib.wasm": "sha256-04e4k5XU8HWGB/dq/2+j84xzzGPflTs0IYWI0OxogVc=",
       "netstandard.wasm": "sha256-gnGZURPnoSmjXuYNCOJi5tt8qn2LRImWgue1Ru3/TDQ=",
       "System.Private.CoreLib.wasm": "sha256-6w3jYr0arcp8jnt4aeqh+AmqrLA6q7jl9rQYAwLzE0M=",
-      "Calender.wasm": "sha256-flmHZYWqsigr2EhZmuELp3R/CfN9CyiPvg+DUZtCWiA="
+      "Calender.wasm": "sha256-6SspxnV287HDacKTwSQEzuV16Q+bYfycXI1DxuJqcjk="
     },
     "pdb": {
-      "Calender.pdb": "sha256-L3aeMapdlSUqxf+QKXSggO5fIfvccX1vMUVp/ZJd6Hc="
+      "Calender.pdb": "sha256-AzjqUhXZDHnNNWSK5e2MqaW+UeVA/7tjkLchmjt18hQ="
     }
   },
   "cacheBootResources": true,

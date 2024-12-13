@@ -76,6 +76,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "SQLitePCLRaw.bundle_green": {
+              "target": "Package",
+              "version": "[2.1.10, )"
+            },
             "XPlat.Device.Geolocation": {
               "target": "Package",
               "version": "[1.8.1, )"

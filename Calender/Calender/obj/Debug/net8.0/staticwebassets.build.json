@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NCFDI6o9cY3SuorGDXDPXrfypwuIPOOPaS7vz5vHIbE=",
+  "Hash": "Kq2F95DqFucwwup51R397jMAH/0sg6oLJPCGIkgX0IY=",
   "Source": "Calender",
   "BasePath": "/",
   "Mode": "Root",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "xcos75t6oy",
-      "Integrity": "r6qYN5oYlZr8rPFcML1J7zO4t9tbT214rgUQKN/Kzro=",
+      "Fingerprint": "olkcnf6d2s",
+      "Integrity": "tFnEqzS9KTaRUFGBFM7RVLbfDzW5xSSyWydhnuIlGUM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\blazor.boot.json"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "n29hegepy2",
-      "Integrity": "L3aeMapdlSUqxf+QKXSggO5fIfvccX1vMUVp/ZJd6Hc=",
+      "Fingerprint": "135xk3z2e5",
+      "Integrity": "AzjqUhXZDHnNNWSK5e2MqaW+UeVA/7tjkLchmjt18hQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\Calender.pdb"
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "ahlv3a90qu",
-      "Integrity": "flmHZYWqsigr2EhZmuELp3R/CfN9CyiPvg+DUZtCWiA=",
+      "Fingerprint": "jxmkb62x2m",
+      "Integrity": "6SspxnV287HDacKTwSQEzuV16Q+bYfycXI1DxuJqcjk=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\webcil\\Calender.wasm"
@@ -225,6 +225,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\j\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.11\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\e_sqlite3.a",
+      "SourceId": "Calender",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/e_sqlite3.a",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b3r7hahvwm",
+      "Integrity": "GZL63yon03K5GQQaYQAi/XpeniBxtUJeKD5ymf6W8xw=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\j\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\runtimes\\browser-wasm\\nativeassets\\net8.0\\e_sqlite3.a"
     },
     {
       "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\emcc-props.json",
@@ -939,6 +960,69 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\webcil\\Newtonsoft.Json.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.batteries_v2.wasm",
+      "SourceId": "Calender",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/SQLitePCLRaw.batteries_v2.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "3v5whd3evz",
+      "Integrity": "r5pUQvWwdp1MxZ7qFfD4+L+mh0WmE7DrApFw8tLgXLA=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\webcil\\SQLitePCLRaw.batteries_v2.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.core.wasm",
+      "SourceId": "Calender",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/SQLitePCLRaw.core.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "1iu403apcu",
+      "Integrity": "aT9iJxIXrYsk8FoIIsd6aHViCVRd9BN56E6BlayaAI4=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\webcil\\SQLitePCLRaw.core.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.provider.e_sqlite3.wasm",
+      "SourceId": "Calender",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/SQLitePCLRaw.provider.e_sqlite3.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "uxqvbkxd4r",
+      "Integrity": "IqWf9GZE+hQv57kMpvhKmc8Uuo5cD4NOnTGLYFaOhL0=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\webcil\\SQLitePCLRaw.provider.e_sqlite3.wasm"
     },
     {
       "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.AppContext.wasm",
@@ -4616,7 +4700,7 @@
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.wasm"
     },
     {
-      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\1oopg0dwn8-xcos75t6oy.gz",
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\1oopg0dwn8-olkcnf6d2s.gz",
       "SourceId": "Calender",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\",
@@ -4630,8 +4714,8 @@
       "RelatedAsset": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "anxs4axg4c",
-      "Integrity": "qmoBEGL5fSmUrsAcatMnhkRpAu7ITU5ixa6qlB38wGo=",
+      "Fingerprint": "yj7xzw5cin",
+      "Integrity": "gogOpY0ks3q7mJzyO7E3Htb0l+7uObPnAYCjI1766I0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -4845,6 +4929,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\4fb64xesf1-1iu403apcu.gz",
+      "SourceId": "Calender",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/SQLitePCLRaw.core.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.core.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "rnhewu9sla",
+      "Integrity": "5zjhgtBZM+Fp44Rb24ZFy5NZOOIZcnkkfaBz1tM7cH8=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.core.wasm"
     },
     {
       "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\4lkg2uopcz-h1b8h0vt7q.gz",
@@ -7304,7 +7409,7 @@
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Linq.Parallel.wasm"
     },
     {
-      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\nl48us68rr-n29hegepy2.gz",
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\nl48us68rr-135xk3z2e5.gz",
       "SourceId": "Calender",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\",
@@ -7318,8 +7423,8 @@
       "RelatedAsset": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Calender.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "mch9jf2fjs",
-      "Integrity": "6tBLIiVoNFzuyNpn8ZGZrEiOoy6i+lJmZliGNYCamHQ=",
+      "Fingerprint": "x42nlk8aho",
+      "Integrity": "b5DI62G9R/b3FGMsxQcABbfIZTQrwvR9Co7oO+jsTpc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Calender.pdb"
@@ -7430,6 +7535,27 @@
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Physical.wasm"
     },
     {
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\ohwvxeyxln-3v5whd3evz.gz",
+      "SourceId": "Calender",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/SQLitePCLRaw.batteries_v2.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.batteries_v2.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "n2c2klnr6y",
+      "Integrity": "YR4Ff6oPahHCJ67p4YS9HM0tALTH5XKVqC+APmoDkOU=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.batteries_v2.wasm"
+    },
+    {
       "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\oq41evqfca-sv4ivqpdih.gz",
       "SourceId": "Calender",
       "SourceType": "Computed",
@@ -7451,7 +7577,7 @@
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.IO.Compression.Brotli.wasm"
     },
     {
-      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\oubrq7rrht-ahlv3a90qu.gz",
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\oubrq7rrht-jxmkb62x2m.gz",
       "SourceId": "Calender",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\",
@@ -7465,8 +7591,8 @@
       "RelatedAsset": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Calender.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "kgtm7bhnyt",
-      "Integrity": "pIFWuP1dJ6sjqGXLy4rFx0ODHI4yiRdrPONCnp/Iv90=",
+      "Fingerprint": "zo78d3axje",
+      "Integrity": "89G61iEBCM8I/chUWgjpd4VhLHIEI8WbYih3+cPHY2g=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Calender.wasm"
@@ -7533,6 +7659,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Numerics.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\pygrgd1kuf-uxqvbkxd4r.gz",
+      "SourceId": "Calender",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/SQLitePCLRaw.provider.e_sqlite3.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.provider.e_sqlite3.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "w7m9wb8f0p",
+      "Integrity": "vEQCa40VLhYEFE5OmlSIP5TRQcJaL7NbTVlq6wL+0X0=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.provider.e_sqlite3.wasm"
     },
     {
       "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\q3h0hklkoc-tg72k81p9v.gz",
@@ -7890,6 +8037,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Console.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\s3qbx0tjuy-b3r7hahvwm.gz",
+      "SourceId": "Calender",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/e_sqlite3.a.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\e_sqlite3.a",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "8d93z55j5o",
+      "Integrity": "LJlHbdofxEVZv1SjYvbzUfinkk4hwOc0+f6gH44k2ew=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\e_sqlite3.a"
     },
     {
       "Identity": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\s5uhlyq6f7-y8m4zhesg5.gz",
@@ -9059,7 +9227,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19978"
+          "Value": "20264"
         },
         {
           "Name": "Content-Type",
@@ -9067,11 +9235,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"r6qYN5oYlZr8rPFcML1J7zO4t9tbT214rgUQKN/Kzro=\""
+          "Value": "\"tFnEqzS9KTaRUFGBFM7RVLbfDzW5xSSyWydhnuIlGUM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Dec 2024 00:03:12 GMT"
+          "Value": "Fri, 13 Dec 2024 01:50:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9081,18 +9249,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-r6qYN5oYlZr8rPFcML1J7zO4t9tbT214rgUQKN/Kzro="
+          "Value": "sha256-tFnEqzS9KTaRUFGBFM7RVLbfDzW5xSSyWydhnuIlGUM="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\1oopg0dwn8-xcos75t6oy.gz",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\1oopg0dwn8-olkcnf6d2s.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000110791048"
+          "Quality": "0.000109003706"
         }
       ],
       "ResponseHeaders": [
@@ -9102,15 +9270,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9025"
+          "Value": "9173"
         },
         {
           "Name": "ETag",
-          "Value": "\"qmoBEGL5fSmUrsAcatMnhkRpAu7ITU5ixa6qlB38wGo=\""
+          "Value": "\"gogOpY0ks3q7mJzyO7E3Htb0l+7uObPnAYCjI1766I0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Dec 2024 00:02:29 GMT"
+          "Value": "Fri, 13 Dec 2024 01:44:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9130,19 +9298,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"r6qYN5oYlZr8rPFcML1J7zO4t9tbT214rgUQKN/Kzro=\""
+          "Value": "W/\"tFnEqzS9KTaRUFGBFM7RVLbfDzW5xSSyWydhnuIlGUM=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-r6qYN5oYlZr8rPFcML1J7zO4t9tbT214rgUQKN/Kzro="
+          "Value": "sha256-tFnEqzS9KTaRUFGBFM7RVLbfDzW5xSSyWydhnuIlGUM="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\1oopg0dwn8-xcos75t6oy.gz",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\1oopg0dwn8-olkcnf6d2s.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9151,7 +9319,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9025"
+          "Value": "9173"
         },
         {
           "Name": "Content-Type",
@@ -9159,11 +9327,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qmoBEGL5fSmUrsAcatMnhkRpAu7ITU5ixa6qlB38wGo=\""
+          "Value": "\"gogOpY0ks3q7mJzyO7E3Htb0l+7uObPnAYCjI1766I0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Dec 2024 00:02:29 GMT"
+          "Value": "Fri, 13 Dec 2024 01:44:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9181,7 +9349,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qmoBEGL5fSmUrsAcatMnhkRpAu7ITU5ixa6qlB38wGo="
+          "Value": "sha256-gogOpY0ks3q7mJzyO7E3Htb0l+7uObPnAYCjI1766I0="
         }
       ]
     },
@@ -9333,7 +9501,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26220"
+          "Value": "26588"
         },
         {
           "Name": "Content-Type",
@@ -9341,11 +9509,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"L3aeMapdlSUqxf+QKXSggO5fIfvccX1vMUVp/ZJd6Hc=\""
+          "Value": "\"AzjqUhXZDHnNNWSK5e2MqaW+UeVA/7tjkLchmjt18hQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Dec 2024 00:03:11 GMT"
+          "Value": "Fri, 13 Dec 2024 01:50:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9355,18 +9523,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-L3aeMapdlSUqxf+QKXSggO5fIfvccX1vMUVp/ZJd6Hc="
+          "Value": "sha256-AzjqUhXZDHnNNWSK5e2MqaW+UeVA/7tjkLchmjt18hQ="
         }
       ]
     },
     {
       "Route": "_framework/Calender.pdb",
-      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\nl48us68rr-n29hegepy2.gz",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\nl48us68rr-135xk3z2e5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000054218174"
+          "Quality": "0.000052837367"
         }
       ],
       "ResponseHeaders": [
@@ -9376,15 +9544,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18443"
+          "Value": "18925"
         },
         {
           "Name": "ETag",
-          "Value": "\"6tBLIiVoNFzuyNpn8ZGZrEiOoy6i+lJmZliGNYCamHQ=\""
+          "Value": "\"b5DI62G9R/b3FGMsxQcABbfIZTQrwvR9Co7oO+jsTpc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Dec 2024 00:02:27 GMT"
+          "Value": "Fri, 13 Dec 2024 01:44:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9404,19 +9572,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"L3aeMapdlSUqxf+QKXSggO5fIfvccX1vMUVp/ZJd6Hc=\""
+          "Value": "W/\"AzjqUhXZDHnNNWSK5e2MqaW+UeVA/7tjkLchmjt18hQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-L3aeMapdlSUqxf+QKXSggO5fIfvccX1vMUVp/ZJd6Hc="
+          "Value": "sha256-AzjqUhXZDHnNNWSK5e2MqaW+UeVA/7tjkLchmjt18hQ="
         }
       ]
     },
     {
       "Route": "_framework/Calender.pdb.gz",
-      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\nl48us68rr-n29hegepy2.gz",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\nl48us68rr-135xk3z2e5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9425,7 +9593,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18443"
+          "Value": "18925"
         },
         {
           "Name": "Content-Type",
@@ -9433,11 +9601,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6tBLIiVoNFzuyNpn8ZGZrEiOoy6i+lJmZliGNYCamHQ=\""
+          "Value": "\"b5DI62G9R/b3FGMsxQcABbfIZTQrwvR9Co7oO+jsTpc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Dec 2024 00:02:27 GMT"
+          "Value": "Fri, 13 Dec 2024 01:44:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9455,7 +9623,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6tBLIiVoNFzuyNpn8ZGZrEiOoy6i+lJmZliGNYCamHQ="
+          "Value": "sha256-b5DI62G9R/b3FGMsxQcABbfIZTQrwvR9Co7oO+jsTpc="
         }
       ]
     },
@@ -9478,11 +9646,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"flmHZYWqsigr2EhZmuELp3R/CfN9CyiPvg+DUZtCWiA=\""
+          "Value": "\"6SspxnV287HDacKTwSQEzuV16Q+bYfycXI1DxuJqcjk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Dec 2024 00:03:11 GMT"
+          "Value": "Fri, 13 Dec 2024 01:50:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9492,18 +9660,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-flmHZYWqsigr2EhZmuELp3R/CfN9CyiPvg+DUZtCWiA="
+          "Value": "sha256-6SspxnV287HDacKTwSQEzuV16Q+bYfycXI1DxuJqcjk="
         }
       ]
     },
     {
       "Route": "_framework/Calender.wasm",
-      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\oubrq7rrht-ahlv3a90qu.gz",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\oubrq7rrht-jxmkb62x2m.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000095831337"
+          "Quality": "0.000095020905"
         }
       ],
       "ResponseHeaders": [
@@ -9513,15 +9681,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10434"
+          "Value": "10523"
         },
         {
           "Name": "ETag",
-          "Value": "\"pIFWuP1dJ6sjqGXLy4rFx0ODHI4yiRdrPONCnp/Iv90=\""
+          "Value": "\"89G61iEBCM8I/chUWgjpd4VhLHIEI8WbYih3+cPHY2g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Dec 2024 00:02:28 GMT"
+          "Value": "Fri, 13 Dec 2024 01:44:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9541,19 +9709,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"flmHZYWqsigr2EhZmuELp3R/CfN9CyiPvg+DUZtCWiA=\""
+          "Value": "W/\"6SspxnV287HDacKTwSQEzuV16Q+bYfycXI1DxuJqcjk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-flmHZYWqsigr2EhZmuELp3R/CfN9CyiPvg+DUZtCWiA="
+          "Value": "sha256-6SspxnV287HDacKTwSQEzuV16Q+bYfycXI1DxuJqcjk="
         }
       ]
     },
     {
       "Route": "_framework/Calender.wasm.gz",
-      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\oubrq7rrht-ahlv3a90qu.gz",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\oubrq7rrht-jxmkb62x2m.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9562,7 +9730,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10434"
+          "Value": "10523"
         },
         {
           "Name": "Content-Type",
@@ -9570,11 +9738,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pIFWuP1dJ6sjqGXLy4rFx0ODHI4yiRdrPONCnp/Iv90=\""
+          "Value": "\"89G61iEBCM8I/chUWgjpd4VhLHIEI8WbYih3+cPHY2g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Dec 2024 00:02:28 GMT"
+          "Value": "Fri, 13 Dec 2024 01:44:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9592,7 +9760,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pIFWuP1dJ6sjqGXLy4rFx0ODHI4yiRdrPONCnp/Iv90="
+          "Value": "sha256-89G61iEBCM8I/chUWgjpd4VhLHIEI8WbYih3+cPHY2g="
         }
       ]
     },
@@ -10415,6 +10583,143 @@
         {
           "Name": "integrity",
           "Value": "sha256-5kcEFWG6ub283bosMcrMUkL7GRDdr+1wtQqeiIjgbBg="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/e_sqlite3.a",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\e_sqlite3.a",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1192598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GZL63yon03K5GQQaYQAi/XpeniBxtUJeKD5ymf6W8xw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Sep 2024 20:05:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GZL63yon03K5GQQaYQAi/XpeniBxtUJeKD5ymf6W8xw="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/e_sqlite3.a",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\s3qbx0tjuy-b3r7hahvwm.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000001850505"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "540392"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LJlHbdofxEVZv1SjYvbzUfinkk4hwOc0+f6gH44k2ew=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Sep 2024 20:05:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"GZL63yon03K5GQQaYQAi/XpeniBxtUJeKD5ymf6W8xw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GZL63yon03K5GQQaYQAi/XpeniBxtUJeKD5ymf6W8xw="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/e_sqlite3.a.gz",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\s3qbx0tjuy-b3r7hahvwm.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "540392"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-gzip"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LJlHbdofxEVZv1SjYvbzUfinkk4hwOc0+f6gH44k2ew=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Sep 2024 20:05:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LJlHbdofxEVZv1SjYvbzUfinkk4hwOc0+f6gH44k2ew="
         }
       ]
     },
@@ -15073,6 +15378,417 @@
         {
           "Name": "integrity",
           "Value": "sha256-WgVIz31Y8ErfPwrLOyXOLlUMz220V0lAKQO0IVJz9+A="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/SQLitePCLRaw.batteries_v2.wasm",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.batteries_v2.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4885"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r5pUQvWwdp1MxZ7qFfD4+L+mh0WmE7DrApFw8tLgXLA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 00:58:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r5pUQvWwdp1MxZ7qFfD4+L+mh0WmE7DrApFw8tLgXLA="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/SQLitePCLRaw.batteries_v2.wasm",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\ohwvxeyxln-3v5whd3evz.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000455166136"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2196"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YR4Ff6oPahHCJ67p4YS9HM0tALTH5XKVqC+APmoDkOU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 00:58:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"r5pUQvWwdp1MxZ7qFfD4+L+mh0WmE7DrApFw8tLgXLA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r5pUQvWwdp1MxZ7qFfD4+L+mh0WmE7DrApFw8tLgXLA="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/SQLitePCLRaw.batteries_v2.wasm.gz",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\ohwvxeyxln-3v5whd3evz.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2196"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YR4Ff6oPahHCJ67p4YS9HM0tALTH5XKVqC+APmoDkOU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 00:58:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YR4Ff6oPahHCJ67p4YS9HM0tALTH5XKVqC+APmoDkOU="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/SQLitePCLRaw.core.wasm",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.core.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50965"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aT9iJxIXrYsk8FoIIsd6aHViCVRd9BN56E6BlayaAI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 00:17:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aT9iJxIXrYsk8FoIIsd6aHViCVRd9BN56E6BlayaAI4="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/SQLitePCLRaw.core.wasm",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\4fb64xesf1-1iu403apcu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000049156958"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20342"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5zjhgtBZM+Fp44Rb24ZFy5NZOOIZcnkkfaBz1tM7cH8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 00:17:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"aT9iJxIXrYsk8FoIIsd6aHViCVRd9BN56E6BlayaAI4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aT9iJxIXrYsk8FoIIsd6aHViCVRd9BN56E6BlayaAI4="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/SQLitePCLRaw.core.wasm.gz",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\4fb64xesf1-1iu403apcu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20342"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5zjhgtBZM+Fp44Rb24ZFy5NZOOIZcnkkfaBz1tM7cH8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 00:17:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5zjhgtBZM+Fp44Rb24ZFy5NZOOIZcnkkfaBz1tM7cH8="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/SQLitePCLRaw.provider.e_sqlite3.wasm",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\bin\\Debug\\net8.0\\wwwroot\\_framework\\SQLitePCLRaw.provider.e_sqlite3.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36629"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IqWf9GZE+hQv57kMpvhKmc8Uuo5cD4NOnTGLYFaOhL0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 00:58:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IqWf9GZE+hQv57kMpvhKmc8Uuo5cD4NOnTGLYFaOhL0="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/SQLitePCLRaw.provider.e_sqlite3.wasm",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\pygrgd1kuf-uxqvbkxd4r.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000069666992"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14353"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vEQCa40VLhYEFE5OmlSIP5TRQcJaL7NbTVlq6wL+0X0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 00:58:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"IqWf9GZE+hQv57kMpvhKmc8Uuo5cD4NOnTGLYFaOhL0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IqWf9GZE+hQv57kMpvhKmc8Uuo5cD4NOnTGLYFaOhL0="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/SQLitePCLRaw.provider.e_sqlite3.wasm.gz",
+      "AssetFile": "C:\\Users\\j\\Documents\\GitHub\\calender\\Calender\\Calender\\obj\\Debug\\net8.0\\compressed\\pygrgd1kuf-uxqvbkxd4r.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14353"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vEQCa40VLhYEFE5OmlSIP5TRQcJaL7NbTVlq6wL+0X0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Dec 2024 00:58:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vEQCa40VLhYEFE5OmlSIP5TRQcJaL7NbTVlq6wL+0X0="
         }
       ]
     },
