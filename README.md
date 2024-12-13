@@ -60,6 +60,11 @@ The Weather-Aware Task Manager combines task management with weather data to hel
   - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Pages/Home.razor#L223
   - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Services/WeatherService.cs#L9
 
+- Have 2 or more tables (entities) in your application that are related and have a function return data from both entities.  In entity framework, this is equivalent to a join
+  - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Pages/Home.razor#L90
+  - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Pages/Home.razor#L109
+  - https://github.com/Carter-LL/WeatherCalender/blob/c3fa16a0abac313ad4164b80902f7a71cb729d8e/Calender/Calender/Pages/Home.razor#L176
+
 ![image](https://github.com/user-attachments/assets/6ae3a8ca-04c7-4d15-af12-b8d0d467ea13)
 ![image](https://github.com/user-attachments/assets/ab4a12c5-6d40-4bbe-8372-764cc4e64a75)
 
