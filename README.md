@@ -6,6 +6,11 @@ The Weather-Aware Task Manager combines task management with weather data to hel
 - Backend: ASP.NET Core for business logic and SQLite for task data storage.
 - Weather API: Integrate a weather service API to pull in real-time weather data based on the user's input (e.g., location or postal code).
 
+# 3 Required Included Features
+- Database Interaction
+- Implement a regular expression (regex) to validate or ensure a field is always stored and displayed in the correct format
+- Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program
+
 # Visual Appeal
 - Design Consistency: Use a selected color palette and font stack to enhance the application's design. Explore current design trends to ensure modern aesthetics.
 - Interactive Elements: Menus, buttons, and forms will follow standard interaction conventions for predictability and ease of use.
