@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "wyNyjWxl0VbgDiGihvK0mzYWHAreg09+sR6HWInUomc=",
+  "Source": "WeatherApp",
+  "BasePath": "_content/WeatherApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WeatherApp\\wwwroot",
+      "Source": "WeatherApp",
+      "ContentRoot": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherApp\\wwwroot\\",
+      "BasePath": "_content/WeatherApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherApp\\wwwroot\\css\\site.css",
+      "SourceId": "WeatherApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherApp\\wwwroot\\",
+      "BasePath": "_content/WeatherApp",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qvbxwdr9tu",
+      "Integrity": "muHNs+UpmeTZcwN07iYcrIx/mdSUs+HobwC4umHZMyI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherApp\\wwwroot\\js\\calender.js",
+      "SourceId": "WeatherApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherApp\\wwwroot\\",
+      "BasePath": "_content/WeatherApp",
+      "RelativePath": "js/calender#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cir4tut08i",
+      "Integrity": "RKm+vyILFNpEaBqfvN84bbzQay+B89tH3M8qe4MBFwE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\calender.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherApp\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2264"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"muHNs+UpmeTZcwN07iYcrIx/mdSUs+HobwC4umHZMyI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Dec 2024 06:51:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-muHNs+UpmeTZcwN07iYcrIx/mdSUs+HobwC4umHZMyI="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.qvbxwdr9tu.css",
+      "AssetFile": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherApp\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2264"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"muHNs+UpmeTZcwN07iYcrIx/mdSUs+HobwC4umHZMyI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Dec 2024 06:51:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qvbxwdr9tu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-muHNs+UpmeTZcwN07iYcrIx/mdSUs+HobwC4umHZMyI="
+        }
+      ]
+    },
+    {
+      "Route": "js/calender.cir4tut08i.js",
+      "AssetFile": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherApp\\wwwroot\\js\\calender.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4335"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RKm+vyILFNpEaBqfvN84bbzQay+B89tH3M8qe4MBFwE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Dec 2024 06:33:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cir4tut08i"
+        },
+        {
+          "Name": "label",
+          "Value": "js/calender.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RKm+vyILFNpEaBqfvN84bbzQay+B89tH3M8qe4MBFwE="
+        }
+      ]
+    },
+    {
+      "Route": "js/calender.js",
+      "AssetFile": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherApp\\wwwroot\\js\\calender.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4335"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RKm+vyILFNpEaBqfvN84bbzQay+B89tH3M8qe4MBFwE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Dec 2024 06:33:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RKm+vyILFNpEaBqfvN84bbzQay+B89tH3M8qe4MBFwE="
+        }
+      ]
+    }
+  ]
+}

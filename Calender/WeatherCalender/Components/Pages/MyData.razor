@@ -1,0 +1,83 @@
+﻿@page "/MyData"
+@using WeatherCalender.Services;
+@using WeatherCalender.Models.SQL;
+@using WeatherCalender.Models.SQL.Tables;
+@using WeatherCalender.Models;
+@using WeatherCalender.Controllers;
+@using WeatherCalender.Services.Database;
+
+@inject HttpClient Http
+<PageTitle>MyData</PageTitle>
+
+<h1>PlannedEvents Data</h1>
+<div id="wrapper_plannedevents"></div>
+
+<h1>UserData</h1>
+<div id="wrapper_userdata"></div>
+
+<script src="js/mydata.js"></script>
+
+<!--<button class="btn btn-outline-primary col-sm-6" id="deleteall" @onclick="DeleteAll">Delete My Everything</button>-->
+
+@code {
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+
+    @inject NavigationManager _navigationManager
+
+    GeoService _geoService = new();
+
+    private static PlannedEventsController plannedEventsController = new PlannedEventsController(new PlannedEventContext());
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await LoadGridData();
+        }
+    }
+
+    public async Task LoadGridData(){
+        List<PlannedEventModel> MyEvents = await plannedEventsController.GetAllPlannedEventsByDesktop(Environment.MachineName);
+        if (MyEvents != null)
+        {
+            foreach (PlannedEventModel mdl in MyEvents)
+            {
+                await JSRuntime.InvokeVoidAsync("addDataToPlannedEventsGrid", mdl.Id, mdl.Desktop, mdl.Date, mdl.Description);
+                Console.WriteLine($"+ Populated PlannedEventsGrid with: Id:{mdl.Id}, Desktop:{mdl.Desktop}, Date:{mdl.Date}, Description:{mdl.Description}");
+            }
+        }
+
+        //Get IP for decrypting geo data
+        string IP = await _geoService.GetIP(Http);
+        //Fallback values
+        if (IP == null)
+        {
+            IP = "0.0.0.0";
+        }
+
+        UserDataController userdataController = new UserDataController(new UserDataContext());
+
+        UserDataModel userData = await userdataController.GetUserData(Environment.MachineName);
+
+        if (userData != null)
+        {
+            string LatDecrypted = EncryptionService.DecryptCoordinate(userData.Lat_Encrypted, IP);
+            string LonDecrypted = EncryptionService.DecryptCoordinate(userData.Lon_Encrypted, IP);
+
+            await JSRuntime.InvokeVoidAsync("addDataToUserDataGrid", userData.Desktop, userData.Lat_Encrypted, userData.Lon_Encrypted, LatDecrypted.ToString().Split(".")[0], LonDecrypted.ToString().Split(".")[0]);
+            Console.WriteLine($"+ Populated UserDataGrid with: Desktop:{userData.Desktop}, Lat_Encrypted:{userData.Lat_Encrypted}, Lon_Encrypted:{userData.Lon_Encrypted}, LatDecrypted:{LatDecrypted}, LonDecrypted:{LonDecrypted}");
+        }
+    }
+
+    public async Task DeleteAll(){
+        //Soon TM
+        //UserDataController userdataController = new UserDataController(new UserDataContext());
+        //await userdataController.DeleteUserData(Environment.MachineName);
+        //await plannedEventsController.DeleteAllPlannedEventsByDesktop(Environment.MachineName);
+
+        //await JSRuntime.InvokeVoidAsync("ClearAllGridData");
+        //await LoadGridData();
+
+    }
+}

@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/WeatherApp/css/site.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-muHNs\u002BUpmeTZcwN07iYcrIx/mdSUs\u002BHobwC4umHZMyI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2264"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022muHNs\u002BUpmeTZcwN07iYcrIx/mdSUs\u002BHobwC4umHZMyI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Dec 2024 06:51:18 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WeatherApp/css/site.qvbxwdr9tu.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qvbxwdr9tu"},{"Name":"integrity","Value":"sha256-muHNs\u002BUpmeTZcwN07iYcrIx/mdSUs\u002BHobwC4umHZMyI="},{"Name":"label","Value":"_content/WeatherApp/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2264"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022muHNs\u002BUpmeTZcwN07iYcrIx/mdSUs\u002BHobwC4umHZMyI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Dec 2024 06:51:18 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WeatherApp/js/calender.cir4tut08i.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\calender.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"cir4tut08i"},{"Name":"integrity","Value":"sha256-RKm\u002BvyILFNpEaBqfvN84bbzQay\u002BB89tH3M8qe4MBFwE="},{"Name":"label","Value":"_content/WeatherApp/js/calender.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4335"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022RKm\u002BvyILFNpEaBqfvN84bbzQay\u002BB89tH3M8qe4MBFwE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Dec 2024 06:33:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WeatherApp/js/calender.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\calender.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RKm\u002BvyILFNpEaBqfvN84bbzQay\u002BB89tH3M8qe4MBFwE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4335"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022RKm\u002BvyILFNpEaBqfvN84bbzQay\u002BB89tH3M8qe4MBFwE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Dec 2024 06:33:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

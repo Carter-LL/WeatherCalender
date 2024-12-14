@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherCalender\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WeatherCalender.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WeatherCalender.h0mxr8vd69.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherCalender\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherCalender\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherCalender\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherCalender\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\j\\source\\repos\\WeatherCalender\\WeatherCalender\\wwwroot\\js\\calender.js",
+      "PackagePath": "staticwebassets\\js\\calender.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WeatherCalender.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WeatherCalender.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.WeatherCalender.props",
+      "PackagePath": "build\\WeatherCalender.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.WeatherCalender.props",
+      "PackagePath": "buildMultiTargeting\\WeatherCalender.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.WeatherCalender.props",
+      "PackagePath": "buildTransitive\\WeatherCalender.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
