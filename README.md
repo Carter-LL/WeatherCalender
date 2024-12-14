@@ -10,6 +10,7 @@ The Weather-Aware Task Manager combines task management with weather data to hel
 - Database Interaction
 - Implement a regular expression (regex) to validate or ensure a field is always stored and displayed in the correct format
 - Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program
+- Make your application asynchronous
 
 # Visual Appeal
 - Design Consistency: Use a selected color palette and font stack to enhance the application's design. Explore current design trends to ensure modern aesthetics.
