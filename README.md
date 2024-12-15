@@ -35,6 +35,8 @@ The Weather-Aware Task Manager combines task management with weather data to hel
 - (Weather Data) https://rapidapi.com/wettercom-wettercom-default/api/forecast9/
 - (Geo Latitude & Longitude Data) https://api.my-ip.io/v2/ip.json
 
+![image](https://github.com/user-attachments/assets/1a137ab8-7d13-4e4f-931c-aeba31704e78)
+![image](https://github.com/user-attachments/assets/e00ec868-2e5c-4f75-b000-eac94c0853de) ![image](https://github.com/user-attachments/assets/66a84ec9-6da7-42a2-b5e6-0585220e78dc)
 ![image](https://github.com/user-attachments/assets/5f2fa91a-ee4c-4454-9aa8-85cb25896b9d)
 ![image](https://github.com/user-attachments/assets/bbb8b3c5-3499-421f-9d9c-1484761fd488)
 
