@@ -97,7 +97,7 @@ namespace WeatherCalender.Controllers
         {
             // Find the planned event where both desktop and date match
             var plannedEvent = await _context.PlannedEvent
-                                              .FirstOrDefaultAsync(pe => pe.Desktop == plannedEventmdl.Desktop && pe.Date == plannedEventmdl.Date);
+                                              .FirstOrDefaultAsync(pe => pe.Desktop == plannedEventmdl.Desktop && pe.Date == plannedEventmdl.Date && pe.Description == plannedEventmdl.Description);
 
             // If no such event is found, return NotFound
             if (plannedEvent == null)

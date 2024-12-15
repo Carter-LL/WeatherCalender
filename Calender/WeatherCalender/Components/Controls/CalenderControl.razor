@@ -127,6 +127,7 @@
     public IJSRuntime JSRuntime { get; set; }
     [Parameter] public Func<PlannedEventModel, Task> OnEventAdded { get; set; }
     [Parameter] public Func<PlannedEventModel, PlannedEventModel, Task> OnEventEdited { get; set; }
+    [Parameter] public Func<PlannedEventModel, Task> OnEventDeleted { get; set; }
 
     private int currentYear = DateTime.Now.Year;
     private int currentMonth = DateTime.Now.Month - 1;
@@ -339,6 +340,15 @@
             var dayEvents = eventData[monthKey][selectedDay.Value - 1];
             dayEvents.Remove(editSelectedEvent);
         }
+
+        var currentEvent = new PlannedEventModel
+            {
+                Date = originalEventDate,
+                Description = originalEventDescription,
+                Desktop = Environment.MachineName,
+            };
+        OnEventDeleted?.Invoke(currentEvent);
+
         CloseEditModal();
         StateHasChanged();
     }

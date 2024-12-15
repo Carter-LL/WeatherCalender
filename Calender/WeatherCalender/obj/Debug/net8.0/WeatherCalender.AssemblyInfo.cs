@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeatherCalender")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c041fdabaadfe3f26ddfed5be3dbe0940d44f5b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fef5598af9ccdd29509d22234f4726b5f59722d")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeatherCalender")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeatherCalender")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

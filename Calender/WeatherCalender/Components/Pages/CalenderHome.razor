@@ -9,7 +9,7 @@
 @inject HttpClient Http
 <h3>CalenderHome</h3>
 
-<CalenderControl @ref="calendarControl" OnEventAdded="HandleEventAdded" OnEventEdited="HandleEventEdited"></CalenderControl>
+<CalenderControl @ref="calendarControl" OnEventAdded="HandleEventAdded" OnEventEdited="HandleEventEdited" OnEventDeleted="HandleEventDeleted"></CalenderControl>
 
 
 
@@ -142,6 +142,12 @@
     private async Task HandleEventEdited(PlannedEventModel currentmdl, PlannedEventModel previousmdl)
     {
         await plannedEventsController.UpdatePlannedEvent(currentmdl.Desktop, currentmdl, previousmdl);
+    }
+
+    // This handler will receive the event from CalendarPage
+    private async Task HandleEventDeleted(PlannedEventModel currentmdl)
+    {
+        await plannedEventsController.DeletePlannedEvent(currentmdl);
     }
 
     public static decimal Average(int num1, int num2)
