@@ -139,10 +139,9 @@
     }
 
     // This handler will receive the event from CalendarPage
-    private async Task HandleEventEdited(PlannedEventModel mdl, int indexv)
+    private async Task HandleEventEdited(PlannedEventModel currentmdl, PlannedEventModel previousmdl)
     {
-        Console.WriteLine(indexv);
-        await plannedEventsController.UpdatePlannedEvent(mdl.Desktop, indexv, mdl);
+        await plannedEventsController.UpdatePlannedEvent(currentmdl.Desktop, currentmdl, previousmdl);
     }
 
     public static decimal Average(int num1, int num2)

@@ -126,7 +126,7 @@
     [Inject]
     public IJSRuntime JSRuntime { get; set; }
     [Parameter] public Func<PlannedEventModel, Task> OnEventAdded { get; set; }
-    [Parameter] public Func<PlannedEventModel,int, Task> OnEventEdited { get; set; }
+    [Parameter] public Func<PlannedEventModel, PlannedEventModel, Task> OnEventEdited { get; set; }
 
     private int currentYear = DateTime.Now.Year;
     private int currentMonth = DateTime.Now.Month - 1;
@@ -141,6 +141,8 @@
     private int editEventIndex;
     private string editSelectedDateString;
     private string editSelectedEvent;
+    private string originalEventDescription;
+    private string originalEventDate;
 
     private Dictionary<string, List<List<string>>> eventData = new Dictionary<string, List<List<string>>>();
     private Dictionary<string, List<List<int>>> temperatureData = new Dictionary<string, List<List<int>>>();
@@ -243,6 +245,10 @@
         editSelectedDateString = $"{currentMonth + 1:D2}-{day:D2}-{currentYear}";
         editSelectedEvent = eventItem;
 
+        // Store the original values before editing
+        originalEventDescription = eventItem;
+        originalEventDate = editSelectedDateString;
+
         JSRuntime.InvokeVoidAsync("$('#editEventModal').modal", "show");
         JSRuntime.InvokeVoidAsync("eval", "document.getElementById('editEventModal').style.display = 'flex'");
     }
@@ -308,8 +314,18 @@
                     Desktop = Environment.MachineName,
                 };
 
+            var previousEvent = new PlannedEventModel
+                {
+                    Date = editSelectedDateString,
+                    Description = originalEventDescription,
+                    Desktop = Environment.MachineName,
+                };
+
+            Console.WriteLine("- Previous Event Before Edit: " + originalEventDescription);
+            Console.WriteLine("+ Current Event After Edit: " + editEventDescription);
+
             // Call the Action to notify any listeners
-            OnEventEdited?.Invoke(newEvent, editEventIndex);
+            OnEventEdited?.Invoke(newEvent, previousEvent);
         }
         CloseEditModal();
         StateHasChanged();

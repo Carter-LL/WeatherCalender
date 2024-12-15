@@ -65,19 +65,19 @@ namespace WeatherCalender.Controllers
 
         // PUT: api/PlannedEvents/{desktop}
         [HttpPut("{desktop}/{index}")]
-        public async Task<IActionResult> UpdatePlannedEvent(string desktop, int index, PlannedEventModel plannedEvent)
+        public async Task<IActionResult> UpdatePlannedEvent(string desktop, PlannedEventModel currentplannedEvent, PlannedEventModel previousplannedEvent)
         {
             var plannedEvents = await _context.PlannedEvent
-                                               .Where(pe => pe.Desktop == desktop)
+                                               .Where(pe => pe.Desktop == desktop).Where(pe => pe.Description == previousplannedEvent.Description)
                                                .ToListAsync();
 
-            if (plannedEvents == null || plannedEvents.Count <= index)
+            if (plannedEvents == null)
             {
                 return NotFound();
             }
 
             // Get the specific planned event by the index
-            var eventToUpdate = plannedEvents[index];
+            var eventToUpdate = plannedEvents[0];
             Console.WriteLine(eventToUpdate.Description);
 
             // Remove the old event
@@ -85,7 +85,7 @@ namespace WeatherCalender.Controllers
             await _context.SaveChangesAsync();
 
             // Add the new event
-            _context.PlannedEvent.Add(plannedEvent);
+            _context.PlannedEvent.Add(currentplannedEvent);
             await _context.SaveChangesAsync();
 
             return NoContent();
