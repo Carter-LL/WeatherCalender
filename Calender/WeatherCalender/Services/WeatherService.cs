@@ -20,11 +20,16 @@ namespace WeatherCalender.Services
             };
             using (var response = await client.SendAsync(request))
             {
-                response.EnsureSuccessStatusCode();
-                var body = await response.Content.ReadAsStringAsync();
+                if (response.IsSuccessStatusCode)
+                {
+                    var body = await response.Content.ReadAsStringAsync();
 
-                WeatherForecastModel forecast = JsonConvert.DeserializeObject<WeatherForecastModel>(body);
-                return forecast;
+                    WeatherForecastModel forecast = JsonConvert.DeserializeObject<WeatherForecastModel>(body);
+                    return forecast;
+                } else
+                {
+                    return null;
+                }
             }
         }
     }

@@ -113,3 +113,14 @@ C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\obj\Debug\net8.0\r
 C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\obj\Debug\net8.0\WeatherCalender.pdb
 C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\obj\Debug\net8.0\WeatherCalender.genruntimeconfig.cache
 C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\obj\Debug\net8.0\ref\WeatherCalender.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\BlazorCalendar.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\j\Documents\GitHub\calender\Calender\WeatherCalender\bin\Debug\net8.0\Microsoft.JSInterop.dll

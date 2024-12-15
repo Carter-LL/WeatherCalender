@@ -1,0 +1,154 @@
+﻿@page "/"
+@using WeatherCalender.Components.Controls
+@using WeatherCalender.Services;
+@using WeatherCalender.Models.SQL;
+@using WeatherCalender.Models.SQL.Tables;
+@using WeatherCalender.Models;
+@using WeatherCalender.Controllers;
+@using WeatherCalender.Services.Database;
+@inject HttpClient Http
+<h3>CalenderHome</h3>
+
+<CalenderControl @ref="calendarControl" OnEventAdded="HandleEventAdded" OnEventEdited="HandleEventEdited"></CalenderControl>
+
+
+
+@code {
+    private CalenderControl calendarControl;
+    private static PlannedEventsController plannedEventsController = new PlannedEventsController(new PlannedEventContext());
+
+    DatabaseService _databaseService = new();
+    WeatherService _weatherService = new();
+    GeoService _geoService = new();
+
+    private string LatDecrypted = "0";
+    private string LongDecrypted = "0";
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Create Planned Events Table, Checking if it already exists or not
+        var PlannedEventsTable = new List<ColumnModel>
+        {
+            new ColumnModel("id", "INT PRIMARY KEY AUTO_INCREMENT"),
+            new ColumnModel("desktop", "VARCHAR(255)"),
+            new ColumnModel("date", "VARCHAR(255)"),
+            new ColumnModel("description", "VARCHAR(255)")
+        };
+        await _databaseService.CreateTable("planned_events", PlannedEventsTable);
+
+        //Create Userdata table to store encrypted geo data, Checking if it already exists or not
+        var UserDataTable = new List<ColumnModel>
+        {
+            new ColumnModel("desktop", "VARCHAR(255)"),
+            new ColumnModel("lat_encrypted", "VARCHAR(255)"),
+            new ColumnModel("lon_encrypted", "VARCHAR(255)")
+        };
+        await _databaseService.CreateTable("userdata", UserDataTable);
+
+        //Create Userdata Controller
+        UserDataController userdataController = new UserDataController(new UserDataContext());
+
+        //Get IP for encrypting geo data
+        string IP = await _geoService.GetIP(Http);
+        //Fallback values
+        if (IP == null)
+        {
+            IP = "0.0.0.0";
+        }
+
+        //Check if userdata is already set to avoid rate limiting api
+        UserDataModel userData = await userdataController.GetUserData(Environment.MachineName);
+        if (userData == null)
+        {
+            Console.WriteLine("Didn't find userdata in SQL, Creating");
+            //Get Required Data from APIs
+            GeoLocationModel geoLocation = await _geoService.GetGeoLocation(Http);
+            //Fallback values
+            if (geoLocation == null)
+            {
+                geoLocation = new();
+                geoLocation.ip = "0.0.0.0";
+                geoLocation.Lat = 50;
+                geoLocation.Lon = 50;
+            }
+            Console.WriteLine($"GeoData Latitude:{geoLocation.Lat}, Longitude:{geoLocation.Lon}");
+
+            //Push userdata
+            UserDataModel userdataModel = new()
+                {
+                    Desktop = Environment.MachineName,
+                    Lat_Encrypted = EncryptionService.EncryptCoordinate(geoLocation.Lat.ToString(), IP),
+                    Lon_Encrypted = EncryptionService.EncryptCoordinate(geoLocation.Lon.ToString(), IP),
+                };
+            await userdataController.CreateUserData(userdataModel);
+            userData = userdataModel;
+        }
+        else
+        {
+            Console.WriteLine("Found userdata in SQL. Avoiding creation.");
+        }
+
+        Console.WriteLine("Encrypted (Server):");
+        Console.WriteLine($"    Userdata: Desktop:{userData.Desktop}, LatitudeEncrypted:{userData.Lat_Encrypted}, LongitudeEncrypted:{userData.Lon_Encrypted}");
+
+        Console.WriteLine("Decrypted (Local):");
+        Console.WriteLine($"    Userdata: Desktop:{userData.Desktop}, Latitude:{EncryptionService.DecryptCoordinate(userData.Lat_Encrypted, IP)}, Longitude:{EncryptionService.DecryptCoordinate(userData.Lon_Encrypted, IP)}");
+
+        LatDecrypted = EncryptionService.DecryptCoordinate(userData.Lat_Encrypted, IP);
+        LongDecrypted = EncryptionService.DecryptCoordinate(userData.Lon_Encrypted, IP);
+
+        //await PageLoad();
+    }
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            List<PlannedEventModel> MyEvents = await plannedEventsController.GetAllPlannedEventsByDesktop(Environment.MachineName);
+            if (MyEvents != null)
+            {
+                foreach (PlannedEventModel mdl in MyEvents)
+                {
+                    calendarControl.AddEventToDay(mdl);
+                }
+            }
+
+            WeatherForecastModel forecast = await _weatherService.GetWeatherData(LatDecrypted, LongDecrypted);
+            if(forecast == null) { return; }
+
+            foreach (ForecastItemModel forecastItem in forecast.Items)
+            {
+                decimal avgtemp = Average(Convert.ToInt32(forecastItem.Temperature.Min), Convert.ToInt32(forecastItem.Temperature.Max));
+                double celsius = Convert.ToDouble(avgtemp);
+                double fahrenheit = (celsius * 9 / 5) + 32;
+
+                int year = Convert.ToInt32(forecastItem.Date.Split("-")[0]);
+                int month = Convert.ToInt32(forecastItem.Date.Split("-")[1]);
+                int day = Convert.ToInt32(forecastItem.Date.Split("-")[2]);
+
+                calendarControl.AddTemperatureToDay(year, month, day, Convert.ToInt32(fahrenheit.ToString().Split(".")[0]));
+            }
+        }
+    }
+
+    // This handler will receive the event from CalendarPage
+    private async Task HandleEventAdded(PlannedEventModel mdl)
+    {
+        await plannedEventsController.CreatePlannedEvent(mdl);
+        // You can do more processing here (e.g., store it, update UI, etc.)
+    }
+
+    // This handler will receive the event from CalendarPage
+    private async Task HandleEventEdited(PlannedEventModel mdl, int indexv)
+    {
+        Console.WriteLine(indexv);
+        await plannedEventsController.UpdatePlannedEvent(mdl.Desktop, indexv, mdl);
+        // You can do more processing here (e.g., store it, update UI, etc.)
+    }
+
+    public static decimal Average(int num1, int num2)
+    {
+        return (decimal)(num1 + num2) / 2;
+    }
+}

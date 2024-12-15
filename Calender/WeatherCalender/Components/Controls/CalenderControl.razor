@@ -1,0 +1,372 @@
+﻿@page "/calendar"
+@using WeatherCalender.Models.SQL.Tables
+@using System.Globalization
+
+<!-- Event Modal for Adding -->
+<div style="display: none;" class="overlay" id="overlayq" tabindex="-1" aria-labelledby="eventModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eventModalLabel">Add Event</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick="CloseModal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="eventDescription" class="form-label">Event Description</label>
+                        <input type="text" class="form-control" id="eventDescription" placeholder="Enter event details" @bind="eventDescription">
+                    </div>
+                    <div class="mb-3">
+                        <label for="eventDate" class="form-label">Event Date</label>
+                        <input type="text" class="form-control" id="eventDate" disabled value="@selectedDateString" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" @onclick="CloseModal">Close</button>
+                <button type="button" class="btn btn-primary" @onclick="AddEvent">Save Event</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Event Modal -->
+<div style="display: none;" class="overlay" id="editEventModal" tabindex="-1" aria-labelledby="editEventModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editEventModalLabel">Edit Event</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick="CloseEditModal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="editEventDescription" class="form-label">Event Description</label>
+                        <input type="text" class="form-control" id="editEventDescription" @bind="editEventDescription" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editEventDate" class="form-label">Event Date</label>
+                        <input type="text" class="form-control" id="editEventDate" disabled value="@editSelectedDateString" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" @onclick="CloseEditModal">Cancel</button>
+                <button type="button" class="btn btn-danger" @onclick="DeleteEvent">Delete Event</button>
+                <button type="button" class="btn btn-primary" @onclick="UpdateEvent">Update Event</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container col-sm-4 col-md-7 col-lg-4 mt-5" style="width: 100%;">
+    <div class="card">
+        <h2 class="text-center">@monthAndYear</h2>
+        <table class="table table-bordered table-responsive-sm" id="calendar">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+                @foreach (var row in calendarDays)
+                {
+                    <tr>
+                        @foreach (var day in row)
+                        {
+                            <td style="height: 100px; width: 250px;" @onclick="() => OpenEventModal(day)">
+                                @if (day.HasValue)
+                                {
+                                    <div style="font-size: 23px;">@day</div>
+                                    <ul>
+                                        @{
+                                            int indexv = 0;
+                                        }
+                                        @foreach (var item in GetDayItems(day.Value))
+                                        {
+                                            <li class="event-item" @onclick="() => OpenEditModal(day.Value, item, indexv)">@item</li>
+                                            indexv += 1;
+                                        }
+                                    </ul>
+                                    @foreach (var temp in GetTemperatureItems(day.Value))
+                                    {
+                                        <div class="temp-value">@temp&deg;C</div>
+                                    }
+                                    <button class="bottomleft btn btn-outline-secondary btn-sm mt-2" @onclick="() => OpenAddEventModal(day)">+</button>
+                                }
+                            </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="form-inline">
+            <button class="btn btn-outline-primary col-sm-6" id="previous" @onclick="PreviousMonth">Previous</button>
+            <button class="btn btn-outline-primary col-sm-6" id="next" @onclick="NextMonth" style="float: right;">Next</button>
+        </div>
+
+        <br />
+    </div>
+</div>
+
+<script>
+    function showEventForm() {
+    document.getElementById("overlayq").style.display = "flex";
+    }
+</script>
+
+@code {
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+    [Parameter] public Func<PlannedEventModel, Task> OnEventAdded { get; set; }
+    [Parameter] public Func<PlannedEventModel,int, Task> OnEventEdited { get; set; }
+
+    private int currentYear = DateTime.Now.Year;
+    private int currentMonth = DateTime.Now.Month - 1;
+    private string monthAndYear;
+    private List<List<int?>> calendarDays;
+    private string eventDescription;
+    private string selectedDateString;
+    private int? selectedDay;
+    private int? temperature;
+
+    private string editEventDescription;
+    private int editEventIndex;
+    private string editSelectedDateString;
+    private string editSelectedEvent;
+
+    private Dictionary<string, List<List<string>>> eventData = new Dictionary<string, List<List<string>>>();
+    private Dictionary<string, List<List<int>>> temperatureData = new Dictionary<string, List<List<int>>>();
+
+    protected override void OnInitialized()
+    {
+        GenerateCalendar();
+    }
+
+    private void GenerateCalendar()
+    {
+        calendarDays = new List<List<int?>>();
+        var firstDayOfMonth = new DateTime(currentYear, currentMonth + 1, 1);
+        var daysInMonth = DateTime.DaysInMonth(currentYear, currentMonth + 1);
+        var startDayOfWeek = (int)firstDayOfMonth.DayOfWeek;
+
+        monthAndYear = $"{firstDayOfMonth.ToString("MMMM")} {currentYear}";
+
+        string monthKey = $"{currentYear}-{currentMonth + 1:D2}";
+        if (!eventData.ContainsKey(monthKey)) eventData[monthKey] = new List<List<string>>(new List<string>[daysInMonth]);
+        if (!temperatureData.ContainsKey(monthKey)) temperatureData[monthKey] = new List<List<int>>(new List<int>[daysInMonth]);
+
+        List<int?> week = new List<int?>(new int?[7]);
+        int dayCounter = 1;
+
+        for (int i = 0; i < startDayOfWeek; i++) week[i] = null;
+        for (int i = startDayOfWeek; i < 7; i++) week[i] = dayCounter++;
+
+        calendarDays.Add(new List<int?>(week));
+        week = new List<int?>(new int?[7]);
+
+        while (dayCounter <= daysInMonth)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                if (dayCounter <= daysInMonth) week[i] = dayCounter++;
+                else week[i] = null;
+            }
+            calendarDays.Add(new List<int?>(week));
+            week = new List<int?>(new int?[7]);
+        }
+    }
+
+    private List<string> GetDayItems(int day)
+    {
+        string monthKey = $"{currentYear}-{currentMonth + 1:D2}";
+        if (eventData.ContainsKey(monthKey) && eventData[monthKey].Count >= day && eventData[monthKey][day - 1] != null)
+        {
+            return eventData[monthKey][day - 1];
+        }
+        return new List<string>();
+    }
+
+    private List<int> GetTemperatureItems(int day)
+    {
+        string monthKey = $"{currentYear}-{currentMonth + 1:D2}";
+        if (temperatureData.ContainsKey(monthKey) && temperatureData[monthKey].Count >= day && temperatureData[monthKey][day - 1] != null)
+        {
+            return temperatureData[monthKey][day - 1];
+        }
+        return new List<int>();
+    }
+
+    private void PreviousMonth()
+    {
+        currentMonth--;
+        if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+        GenerateCalendar();
+    }
+
+    private void Jump() { GenerateCalendar(); }
+    private void NextMonth()
+    {
+        currentMonth++;
+        if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+        GenerateCalendar();
+    }
+
+    private void OpenEventModal(int? day)
+    {
+        selectedDay = day;
+        selectedDateString = $"{currentMonth + 1:D2}-{day:D2}-{currentYear}";
+        eventDescription = string.Empty;
+        JSRuntime.InvokeVoidAsync("$('#eventModal').modal", "show");
+    }
+
+    private void OpenAddEventModal(int? day)
+    {
+        selectedDay = day;
+        selectedDateString = $"{currentYear}-{currentMonth + 1:D2}-{day:D2}";
+        JSRuntime.InvokeVoidAsync("$('#overlayq').modal", "show");
+        JSRuntime.InvokeVoidAsync("eval", "document.getElementById('overlayq').style.display = 'flex'");
+    }
+
+    private void OpenEditModal(int day, string eventItem, int indexv)
+    {
+        // Set the event details for editing
+        editEventDescription = eventItem;
+        editEventIndex = indexv;
+        editSelectedDateString = $"{currentMonth + 1:D2}-{day:D2}-{currentYear}";
+        editSelectedEvent = eventItem;
+
+        JSRuntime.InvokeVoidAsync("$('#editEventModal').modal", "show");
+        JSRuntime.InvokeVoidAsync("eval", "document.getElementById('editEventModal').style.display = 'flex'");
+    }
+
+    private void CloseModal()
+    {
+        eventDescription = string.Empty;
+        selectedDateString = string.Empty;
+        selectedDay = null;
+
+        JSRuntime.InvokeVoidAsync("$('#overlayq').modal", "hide");
+        JSRuntime.InvokeVoidAsync("eval", "document.getElementById('overlayq').style.display = 'none'");
+    }
+
+    private void CloseEditModal()
+    {
+        editEventDescription = string.Empty;
+        editEventIndex = 0;
+        editSelectedDateString = string.Empty;
+        editSelectedEvent = string.Empty;
+
+        JSRuntime.InvokeVoidAsync("$('#editEventModal').modal", "hide");
+        JSRuntime.InvokeVoidAsync("eval", "document.getElementById('editEventModal').style.display = 'none'");
+    }
+
+    private async Task AddEvent()
+    {
+        if (!string.IsNullOrEmpty(eventDescription) && selectedDay.HasValue)
+        {
+            var newEvent = new PlannedEventModel
+                {
+                    Date = selectedDateString,
+                    Description = eventDescription,
+                    Desktop = Environment.MachineName,
+                };
+
+            // Call the Action to notify any listeners
+            OnEventAdded?.Invoke(newEvent);
+
+            AddEventToDay(newEvent); // Add event to the selected day
+            CloseModal();
+        }
+    }
+
+    private void UpdateEvent()
+    {
+        if (selectedDay != null && !string.IsNullOrEmpty(editEventDescription))
+        {
+            string monthKey = $"{currentYear}-{currentMonth + 1:D2}";
+            if (!eventData.ContainsKey(monthKey)) eventData[monthKey] = new List<List<string>>();
+            if (eventData[monthKey].Count < selectedDay) eventData[monthKey].Add(new List<string>());
+            var dayEvents = eventData[monthKey][selectedDay.Value - 1];
+            var index = dayEvents.IndexOf(editSelectedEvent);
+            if (index >= 0)
+            {
+                dayEvents[index] = editEventDescription;
+            }
+
+            var newEvent = new PlannedEventModel
+                {
+                    Date = editSelectedDateString,
+                    Description = editEventDescription,
+                    Desktop = Environment.MachineName,
+                };
+
+            // Call the Action to notify any listeners
+            OnEventEdited?.Invoke(newEvent, editEventIndex);
+        }
+        CloseEditModal();
+        StateHasChanged();
+    }
+
+    private void DeleteEvent()
+    {
+        string monthKey = $"{currentYear}-{currentMonth + 1:D2}";
+        if (eventData.ContainsKey(monthKey))
+        {
+            var dayEvents = eventData[monthKey][selectedDay.Value - 1];
+            dayEvents.Remove(editSelectedEvent);
+        }
+        CloseEditModal();
+        StateHasChanged();
+    }
+
+    public void AddEventToDay(PlannedEventModel mdl)
+    {
+        int month = Convert.ToInt32(mdl.Date.Split("-")[0]);
+        int day = Convert.ToInt32(mdl.Date.Split("-")[1]);
+        int year = Convert.ToInt32(mdl.Date.Split("-")[2]);
+
+        if (year == currentYear && month == currentMonth + 1)
+        {
+            if (day >= 1 && day <= DateTime.DaysInMonth(year, month))
+            {
+                string monthKey = $"{currentYear}-{currentMonth + 1:D2}";
+
+                if (eventData[monthKey][day - 1] == null)
+                {
+                    eventData[monthKey][day - 1] = new List<string>();
+                }
+
+                eventData[monthKey][day - 1].Add(mdl.Description);
+            }
+        }
+        StateHasChanged();
+    }
+
+    public void AddTemperatureToDay(int year, int month, int day, int temperature)
+    {
+        if (year == currentYear && month == currentMonth + 1)
+        {
+            if (day >= 1 && day <= DateTime.DaysInMonth(year, month))
+            {
+                string monthKey = $"{currentYear}-{currentMonth + 1:D2}";
+
+                if (temperatureData[monthKey][day - 1] == null)
+                {
+                    temperatureData[monthKey][day - 1] = new List<int>();
+                }
+
+                temperatureData[monthKey][day - 1].Add(temperature);
+            }
+        }
+        StateHasChanged();
+    }
+}
+}

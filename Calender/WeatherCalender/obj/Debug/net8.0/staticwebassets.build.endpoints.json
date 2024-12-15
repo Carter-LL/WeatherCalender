@@ -3,7 +3,7 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
-      "Route": "WeatherCalender.e8b6to1o67.styles.css",
+      "Route": "WeatherCalender.2v924mi9ck.styles.css",
       "AssetFile": "WeatherCalender.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -17,7 +17,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5914"
+          "Value": "5993"
         },
         {
           "Name": "Content-Type",
@@ -25,21 +25,25 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XiuiiMdhFoprdx7sGVgWFKKCFOGZk2Z2ZJQx4Eeq52M=\""
+          "Value": "\"kmUy8FQS6iL0aOMEIBLoxMCbQS1F9EDPMqbk9rc9bKQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Dec 2024 17:52:15 GMT"
+          "Value": "Sun, 15 Dec 2024 00:00:44 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/BlazorCalendar/BlazorCalendar.5ariyvl65x.bundle.scp.css>; rel=\"preload\"; as=\"style\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "e8b6to1o67"
+          "Value": "2v924mi9ck"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-XiuiiMdhFoprdx7sGVgWFKKCFOGZk2Z2ZJQx4Eeq52M="
+          "Value": "sha256-kmUy8FQS6iL0aOMEIBLoxMCbQS1F9EDPMqbk9rc9bKQ="
         },
         {
           "Name": "label",
@@ -62,7 +66,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5914"
+          "Value": "5993"
         },
         {
           "Name": "Content-Type",
@@ -70,23 +74,27 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XiuiiMdhFoprdx7sGVgWFKKCFOGZk2Z2ZJQx4Eeq52M=\""
+          "Value": "\"kmUy8FQS6iL0aOMEIBLoxMCbQS1F9EDPMqbk9rc9bKQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Dec 2024 17:52:15 GMT"
+          "Value": "Sun, 15 Dec 2024 00:00:44 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/BlazorCalendar/BlazorCalendar.5ariyvl65x.bundle.scp.css>; rel=\"preload\"; as=\"style\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-XiuiiMdhFoprdx7sGVgWFKKCFOGZk2Z2ZJQx4Eeq52M="
+          "Value": "sha256-kmUy8FQS6iL0aOMEIBLoxMCbQS1F9EDPMqbk9rc9bKQ="
         }
       ]
     },
     {
-      "Route": "app.975lya4r5d.css",
-      "AssetFile": "app.css",
+      "Route": "_content/BlazorCalendar/BlazorCalendar.5ariyvl65x.bundle.scp.css",
+      "AssetFile": "_content/BlazorCalendar/BlazorCalendar.5ariyvl65x.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -99,7 +107,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3860"
+          "Value": "914"
         },
         {
           "Name": "Content-Type",
@@ -107,25 +115,144 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ayipjcKoHb+KckjsTViiLqK5ZMRTSS1ozJSv/LIiDzk=\""
+          "Value": "\"nWjZwK2sCB0wXC15R4cwmYtvejEYrg/6V/uKz1ZDvsw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Dec 2024 17:52:13 GMT"
+          "Value": "Tue, 19 Nov 2024 09:39:30 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "975lya4r5d"
+          "Value": "5ariyvl65x"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ayipjcKoHb+KckjsTViiLqK5ZMRTSS1ozJSv/LIiDzk="
+          "Value": "sha256-nWjZwK2sCB0wXC15R4cwmYtvejEYrg/6V/uKz1ZDvsw="
         },
         {
           "Name": "label",
-          "Value": "app.css"
+          "Value": "_content/BlazorCalendar/BlazorCalendar.bundle.scp.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorCalendar/BlazorCalendar.bundle.scp.css",
+      "AssetFile": "_content/BlazorCalendar/BlazorCalendar.5ariyvl65x.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "914"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nWjZwK2sCB0wXC15R4cwmYtvejEYrg/6V/uKz1ZDvsw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Nov 2024 09:39:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nWjZwK2sCB0wXC15R4cwmYtvejEYrg/6V/uKz1ZDvsw="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorCalendar/BlazorCalendar.css",
+      "AssetFile": "_content/BlazorCalendar/BlazorCalendar.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5944"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YrPJ+WGPibT9nm4dSE2+Ai7NrihTq/ng/yUe2yobS9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 29 Nov 2023 16:34:25 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YrPJ+WGPibT9nm4dSE2+Ai7NrihTq/ng/yUe2yobS9o="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorCalendar/BlazorCalendar.uwo69crqe1.css",
+      "AssetFile": "_content/BlazorCalendar/BlazorCalendar.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5944"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YrPJ+WGPibT9nm4dSE2+Ai7NrihTq/ng/yUe2yobS9o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 29 Nov 2023 16:34:25 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uwo69crqe1"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YrPJ+WGPibT9nm4dSE2+Ai7NrihTq/ng/yUe2yobS9o="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorCalendar/BlazorCalendar.css"
         }
       ]
     },
@@ -144,7 +271,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3860"
+          "Value": "4599"
         },
         {
           "Name": "Content-Type",
@@ -152,17 +279,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ayipjcKoHb+KckjsTViiLqK5ZMRTSS1ozJSv/LIiDzk=\""
+          "Value": "\"1J8s0oOL9hKMKKtilPlMsSyl54is62dGBoPIuBElxiI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Dec 2024 17:52:13 GMT"
+          "Value": "Sun, 15 Dec 2024 02:37:23 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ayipjcKoHb+KckjsTViiLqK5ZMRTSS1ozJSv/LIiDzk="
+          "Value": "sha256-1J8s0oOL9hKMKKtilPlMsSyl54is62dGBoPIuBElxiI="
+        }
+      ]
+    },
+    {
+      "Route": "app.gjzpg87dvg.css",
+      "AssetFile": "app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4599"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1J8s0oOL9hKMKKtilPlMsSyl54is62dGBoPIuBElxiI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Dec 2024 02:37:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gjzpg87dvg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1J8s0oOL9hKMKKtilPlMsSyl54is62dGBoPIuBElxiI="
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
         }
       ]
     },

@@ -83,6 +83,17 @@ td {
     position: relative; /* Make td a positioned container */
 }
 
+/* Apply a color change when hovering over event items */
+.event-item {
+    cursor: pointer; /* Makes the cursor a pointer to indicate it's clickable */
+    transition: color 0.3s ease; /* Smooth transition effect for color change */
+}
+
+    /* Change text color on hover */
+    .event-item:hover {
+        color: #007bff; /* Change this color to whatever you want (blue here) */
+    }
+
 .temp-value {
     position: absolute; /* Position the temperature value absolutely */
     top: 0; /* Align it to the top */
@@ -91,6 +102,15 @@ td {
     font-weight: bold; /* Make it bold */
     color: #ff4500; /* Choose a color for the temperature (optional) */
 }
+.bottomleft {
+    position: absolute; /* Position the temperature value absolutely */
+    bottom: 0; /* Align it to the bottom */
+    left: 0; /* Align it to the left */
+    font-size: 14px; /* Adjust the font size */
+    font-weight: bold; /* Make it bold */
+    color: green; /* Choose a color for the temperature (optional) */
+}
+
 .enter-btn {
     background-color: #007bff;
     color: white;

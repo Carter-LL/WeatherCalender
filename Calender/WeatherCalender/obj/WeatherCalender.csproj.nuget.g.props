@@ -15,5 +15,6 @@
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.20\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.20\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorcalendar\2.7.0\buildTransitive\BlazorCalendar.props" Condition="Exists('$(NuGetPackageRoot)blazorcalendar\2.7.0\buildTransitive\BlazorCalendar.props')" />
   </ImportGroup>
 </Project>

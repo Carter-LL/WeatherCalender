@@ -64,33 +64,54 @@ namespace WeatherCalender.Controllers
         }
 
         // PUT: api/PlannedEvents/{desktop}
-        [HttpPut("{desktop}")]
-        public async Task<IActionResult> UpdatePlannedEvent(string desktop, PlannedEventModel plannedEvent)
+        [HttpPut("{desktop}/{index}")]
+        public async Task<IActionResult> UpdatePlannedEvent(string desktop, int index, PlannedEventModel plannedEvent)
         {
-            if (desktop != plannedEvent.Desktop)
+            var plannedEvents = await _context.PlannedEvent
+                                               .Where(pe => pe.Desktop == desktop)
+                                               .ToListAsync();
+
+            if (plannedEvents == null || plannedEvents.Count <= index)
             {
-                return BadRequest();
+                return NotFound();
             }
 
-            _context.Entry(plannedEvent).State = EntityState.Modified;
+            // Get the specific planned event by the index
+            var eventToUpdate = plannedEvents[index];
+            Console.WriteLine(eventToUpdate.Description);
+
+            // Remove the old event
+            _context.PlannedEvent.Remove(eventToUpdate);
             await _context.SaveChangesAsync();
+
+            // Add the new event
+            _context.PlannedEvent.Add(plannedEvent);
+            await _context.SaveChangesAsync();
+
             return NoContent();
         }
 
-        // DELETE: api/PlannedEvents/{desktop}
-        [HttpDelete("{desktop}")]
-        public async Task<IActionResult> DeletePlannedEvent(string desktop)
+        // DELETE: api/PlannedEvents/{desktop}/{date}
+        [HttpDelete("{desktop}/{date}")]
+        public async Task<IActionResult> DeletePlannedEvent(PlannedEventModel plannedEventmdl)
         {
-            var plannedEvent = await _context.PlannedEvent.FindAsync(desktop);
+            // Find the planned event where both desktop and date match
+            var plannedEvent = await _context.PlannedEvent
+                                              .FirstOrDefaultAsync(pe => pe.Desktop == plannedEventmdl.Desktop && pe.Date == plannedEventmdl.Date);
+
+            // If no such event is found, return NotFound
             if (plannedEvent == null)
             {
                 return NotFound();
             }
 
+            // Remove the found planned event
             _context.PlannedEvent.Remove(plannedEvent);
             await _context.SaveChangesAsync();
+
             return NoContent();
         }
+
 
         [HttpDelete("desktop/{desktop}")]
         public async Task<IActionResult> DeleteAllPlannedEventsByDesktop(string desktop)
